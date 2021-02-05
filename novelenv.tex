@@ -1,0 +1,139 @@
+% Language
+	\mainlanguage[sv]
+
+% Fonts
+	\setupbodyfont[pagella,10pt]
+
+% Define paper sizes
+	\definepapersize
+		[5x8]
+		[width=5in,height=8in]
+	
+	\definepapersize
+		[demy8vo]
+		[width=5.5in,height=8.5in]
+	
+	\definepapersize
+		[6x9]
+		[width=6in,height=9in]
+	
+	\definepapersize
+		[royal8vo]
+		[width=6.14in,height=9.21in]
+	
+	\definepapersize
+		[myPaperSize]
+		[height=297mm,width=210mm]
+
+	\definepapersize
+		[myPageSize]
+		[height=150mm,width=150mm]
+
+% Use page size on paper size
+	\setuppapersize
+		[6x9]
+		[A4]
+
+% Set layout of page
+	\setuplayout
+		[location={middle, left, doublesided},
+			marking=on,
+			backspace=.75 in,
+			width=middle,
+			topspace=.5 in,
+			height=middle,
+			header=.25 in,
+			headerdistance=.25 in,
+			footer=0 in,
+			footerdistance=0 in,
+%			bottomspace=0.9 in,
+%			cutspace=.875 in,
+			]
+
+%
+\setuppagenumbering
+	[location={footer,inright},
+		alternative=doublesided]
+
+% Indenting
+	\setupindenting[yes,small,next]
+
+% Setup headings	
+	\setuphead[part]				
+		[conversion=I,
+			placehead=yes,
+			alternative=middle,
+			before=\startstandardmakeup,
+			after=\stopstandardmakeup,
+			header=empty]
+		
+	\setuphead[chapter]
+		[page=yes,
+			number=yes,
+			style={\tfc \bf},
+			sectionsegments=chapter,
+			align=nothyphenated,
+			header=empty,
+			numbercommand={}]
+			
+	\setuphead[section]
+		[page=no,
+			number=yes,
+			header=,
+			sectionsegments=section,
+			numbercommand={\DAN},
+			alternative=,
+			before={\blank},
+			after=,
+			style={\tfb \bf},
+			inbetween=,]
+	
+	\setuphead[subsection]
+		[commandbefore={\startnarrower},
+			commandafter={\stopnarrower},
+			page=no,number=no,
+			header=,
+			sectionsegments=section,
+			numbercommand={},
+			alternative=,
+			before={\blank},
+			after={\blank},
+			style={\sc},
+			inbetween=,
+			align=middle]
+
+	\setuphead[subsubsection]
+		[page=no,
+			number=no,
+			header=,
+			sectionsegments=section,
+			numbercommand={},
+			alternative=,
+			before={\blank},
+			after={\blank},
+			style={\sc},
+			inbetween=,
+			align=middle]
+
+
+% Diagnostics
+	\showframe
+
+% Modify pages to fit content
+%	\adaptlayout
+%		[<pages>]
+%		[height=+1cm,
+%			lines=+1]
+
+	
+\starttext
+
+	\startchapter
+		[title=Testing]
+		\input knuth
+		\input knuth
+		\input knuth
+	\stopchapter
+
+Hello world!
+\stoptext
