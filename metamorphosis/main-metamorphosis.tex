@@ -1,12 +1,23 @@
 \environment env-novel
 
+%\setupmakeup[standard][page=yes, doublesided=no,top=,]
+
 \starttext
-{\mytitlefont Metamorphosis}
 
-by Franz Kafka
+%Titlepage
+\startmakeup[standard][page=right, doublesided=no,top=,]
+\qquad{\mytitlefont Metamorphosis}
 
-Translated by David Wyllie
-\page
+\qquad by Franz Kafka
+
+\qquad Translated by David Wyllie
+\stopmakeup
+
+
+%Copyrightpage
+\startmakeup[standard][page=yes, doublesided=no,top=,]
+copyright stuff
+\stopmakeup
 
 
 

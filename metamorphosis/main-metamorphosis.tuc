@@ -136,10 +136,10 @@ utilitydata.structures.counters.collected={
   { 0, 0, 0, 0 },
  },
  ["realpage"]={
-  { 54 },
+  { 52 },
  },
  ["subpage"]={
-  { 54 },
+  { 52 },
  },
  ["table"]={
   { 0, 0, 0, 0 },
@@ -148,7 +148,7 @@ utilitydata.structures.counters.collected={
   { 0 },
  },
  ["userpage"]={
-  { 54 },
+  { 50 },
  },
 }
 
@@ -162,7 +162,7 @@ utilitydata.structures.lists.collected={
   ["references"]={
    ["block"]="bodypart",
    ["internal"]=1,
-   ["realpage"]=2,
+   ["realpage"]=3,
    ["section"]=1,
   },
   ["titledata"]={
@@ -188,7 +188,7 @@ utilitydata.structures.lists.collected={
   ["references"]={
    ["block"]="bodypart",
    ["internal"]=3,
-   ["realpage"]=37,
+   ["realpage"]=36,
    ["section"]=3,
   },
   ["titledata"]={
@@ -201,6 +201,20 @@ if not utilitydata.structures then utilitydata.structures = { } end
 if not utilitydata.structures.pages then utilitydata.structures.pages = { } end
 
 utilitydata.structures.pages.collected={
+ {
+  ["block"]="bodypart",
+  ["number"]=1,
+  ["numberdata"]=8,
+  ["prefixdata"]=9,
+  ["state"]="stop",
+ },
+ {
+  ["block"]="bodypart",
+  ["number"]=1,
+  ["numberdata"]=8,
+  ["prefixdata"]=9,
+  ["state"]="stop",
+ },
  {
   ["block"]="bodypart",
   ["number"]=1,
@@ -547,34 +561,6 @@ utilitydata.structures.pages.collected={
  {
   ["block"]="bodypart",
   ["number"]=50,
-  ["numberdata"]=8,
-  ["prefixdata"]=9,
-  ["state"]="start",
- },
- {
-  ["block"]="bodypart",
-  ["number"]=51,
-  ["numberdata"]=8,
-  ["prefixdata"]=9,
-  ["state"]="start",
- },
- {
-  ["block"]="bodypart",
-  ["number"]=52,
-  ["numberdata"]=8,
-  ["prefixdata"]=9,
-  ["state"]="start",
- },
- {
-  ["block"]="bodypart",
-  ["number"]=53,
-  ["numberdata"]=8,
-  ["prefixdata"]=9,
-  ["state"]="start",
- },
- {
-  ["block"]="bodypart",
-  ["number"]=54,
   ["numberdata"]=8,
   ["prefixdata"]=9,
   ["state"]="start",

@@ -64,7 +64,7 @@
 	\definepapersize[myPaperSize][height=297mm,width=210mm]
 	\definepapersize[myPageSize][height=150mm,width=150mm]
 
-	\setuppapersize[demy8vo][A4]
+	\setuppapersize[demy8vo][demy8vo]
 
 % Set layout of page
 	\setuplayout
@@ -88,10 +88,21 @@ lines=37,
 			]
 
 %
+
+
 \setuppagenumbering
-	[location={footer,right},
+	[location=,
 		alternative=doublesided]
 %	[location=,]
+
+% Headers and footers
+
+\setupfootertexts
+	[]
+	[\userpagenumber \quad\quad] %recto
+	[\qquad \userpagenumber] %verso
+	[]
+
 % Indenting
 	\setupindenting[yes,medium,next]
 %	\setupwhitespace[medium]
