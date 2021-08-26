@@ -1,0 +1,168 @@
+% Language
+	\mainlanguage[en]
+
+% Fonts: typescripts
+	\definefontfeature
+	  [eb-garamond-normal]
+	  [default]
+	  [mode=node,ccmp=yes,calt=yes,
+	   liga=yes,dlig=no,hlig=yes,
+	   kern=yes,mark=yes,mkmk=yes,
+	   onum=yes,pnum=yes,salt=yes,
+	   script=latn]
+
+	\definefontfeature
+	  [eb-garamond-smallcaps]
+	  [eb-garamond-normal]
+	  [smcp=yes,c2sc=yes]
+
+	\starttypescript [serif] [ebgaramond]
+		\setups[font:fallback:serif]
+		\definefontsynonym [Serif]          [file:EBGaramond-Regular]   [features=eb-garamond-normal]
+		\definefontsynonym [SerifItalic]    [file:EBGaramond-Italic]    [features=eb-garamond-normal]
+		\definefontsynonym [SerifBold]      [file:EBGaramond-Bold]      [features=eb-garamond-normal]
+		\definefontsynonym [SerifBoldItalic][file:EBGaramond-BoldItalic][features=eb-garamond-normal]
+		\definefontsynonym [SerifCaps]      [Serif]                     [features=eb-garamond-smallcaps]
+	\stoptypescript
+
+	\definefontfeature
+	  [gillius-normal]
+	  [default]
+	  [mode=node,ccmp=yes,calt=yes,
+	   liga=yes,dlig=no,hlig=yes,
+	   kern=yes,mark=yes,mkmk=yes,
+	   onum=yes,pnum=yes,salt=yes,
+	   script=latn]
+
+	\starttypescript [sans] [gillius]
+		\setups[font:fallback:sans]
+		\definefontsynonym [Sans]          [file:GilliusADF-Regular]   [features=gillius-normal]
+		\definefontsynonym [SansItalic]    [file:GilliusADF-Italic]    [features=gillius-normal]
+		\definefontsynonym [SansBold]      [file:GilliusADF-Bold]      [features=gillius-normal]
+		\definefontsynonym [SansBoldItalic][file:GilliusADF-BoldItalic][features=gillius-normal]
+		\definefontsynonym [SansCaps]      [Sans]                      [features=gillius-normal]
+	\stoptypescript
+
+	\starttypescript[myfonts]
+	        \definetypeface [myfonts] [rm] [serif] [ebgaramond] [default]
+		\definetypeface [myfonts] [ss] [sans]  [gillius]    [default]
+	        \definetypeface [myfonts] [tt] [mono]  [dejavu]     [default] [rscale=0.8] 
+	        \definetypeface [myfonts] [mm] [math]  [bonum]      [default] [rscale=0.8]
+	\stoptypescript
+
+	\setupbodyfontenvironment[12pt][em=italic] %default
+	\setupbodyfont[myfonts] %default
+
+% Fonts: semantic names
+	\definefont[titlefont][Serif at 36 pt]
+
+% Define and use paper sizes
+	\definepapersize[5x8][width=5in,height=8in]
+	\definepapersize[demy8vo][width=5.5in,height=8.5in]
+	\definepapersize[6x9][width=6in,height=9in]
+	\definepapersize[royal8vo][width=6.14in,height=9.21in]
+	\definepapersize[myPaperSize][height=297mm,width=210mm]
+	\definepapersize[myPageSize][height=150mm,width=150mm]
+
+	\setuppapersize[6x9][A4]
+
+% Set layout of page
+	\setuplayout
+		[location={middle, left, doublesided},
+			marking=on,
+			backspace=15 mm,
+			leftmargindistance=1 mm,
+			leftmargin=0 mm,
+			rightmargindistance=1 mm,
+			rightmargin=0 mm,
+			width=middle,
+			topspace=15 mm,
+			height=middle,
+			header=0 mm,
+			headerdistance=0 mm,
+			footer=0 mm,
+			footerdistance=0 mm,
+%			bottomspace=0.9 in,
+%			cutspace=.875 in,
+			]
+
+%
+\setuppagenumbering
+%	[location={footer,inright},
+%		alternative=doublesided]
+	[location=,]
+% Indenting
+	\setupindenting[yes,medium,next]
+%	\setupwhitespace[medium]
+
+% Setup headings	
+
+	\setuphead[title]
+   		[style=\ssd,
+   			align=middle,
+			after={\blank[small]}]
+
+	\definehead[author][title]
+	\setuphead[author]
+		[page=no,
+			before={\blank[none]},
+			after={\blank[2*big]},
+			style=\ssa]
+
+	\setuphead[part]				
+		[conversion=I,
+			placehead=yes,
+			alternative=middle,
+			before=\startstandardmakeup,
+			after=\stopstandardmakeup,
+			header=empty]
+		
+	\setuphead[chapter]
+		[page=yes,
+			number=no,
+			style=\ssd,
+			sectionsegments=chapter,
+			align=nothyphenated,
+			header=empty,
+			numbercommand={},
+			align=middle]
+
+			
+	\setuphead[section]
+		[page=no,
+			number=no,
+			header=,
+			sectionsegments=section,
+			%numbercommand={\DAN},
+			alternative=,
+			before={\blank},
+			after=,
+			style={\ssc},
+%			textstyle={\kerncharacters[.3]},
+			inbetween=,]
+	
+	\setuphead[subsection]
+		[%commandbefore={\startnarrower},
+		%	commandafter={\stopnarrower},
+			page=no,number=yes,
+			header=,
+			sectionsegments=section,
+			numbercommand={},
+			alternative=,
+			before={\blank},
+			after=,
+			style={\tfb},
+			inbetween={},
+			align=right]
+
+% Diagnostics
+%	\showframe
+
+% Modify pages to fit content
+%	\adaptlayout
+%		[<pages>]
+%		[height=+1cm,
+%			lines=+1]
+
+	
+

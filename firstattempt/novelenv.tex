@@ -2,7 +2,10 @@
 	\mainlanguage[sv]
 
 % Fonts
-	\setupbodyfont[pagella,10pt]
+%	\usetypescriptfile[myebgaramond]
+	\setupbodyfont[zapftext]
+
+	\definefontsynonym[titlefont][sans sa 3]
 
 % Define paper sizes
 	\definepapersize
@@ -31,32 +34,34 @@
 
 % Use page size on paper size
 	\setuppapersize
-		[6x9]
+		[A4]
 		[A4]
 
 % Set layout of page
 	\setuplayout
 		[location={middle, left, doublesided},
 			marking=on,
-			backspace=.75 in,
+			backspace=15 mm,
 			width=middle,
-			topspace=.5 in,
+			topspace=15 mm,
 			height=middle,
-			header=.25 in,
-			headerdistance=.25 in,
-			footer=0 in,
-			footerdistance=0 in,
+			header=0 mm,
+			headerdistance=0 mm,
+			footer=0 mm,
+			footerdistance=0 mm,
 %			bottomspace=0.9 in,
 %			cutspace=.875 in,
 			]
 
 %
 \setuppagenumbering
-	[location={footer,inright},
-		alternative=doublesided]
-
+%	[location={footer,inright},
+%		alternative=doublesided]
+	[location=,]
 % Indenting
-	\setupindenting[yes,small,next]
+%	\setupindenting[yes,small,next]
+	\setupindenting[no]
+	\setupwhitespace[medium]
 
 % Setup headings	
 	\setuphead[part]				
@@ -69,38 +74,41 @@
 		
 	\setuphead[chapter]
 		[page=yes,
-			number=yes,
-			style={\tfc \bf},
+			number=no,
+			style={\ssd},
 			sectionsegments=chapter,
 			align=nothyphenated,
 			header=empty,
-			numbercommand={}]
+			numbercommand={},
+			align=middle]
+
 			
 	\setuphead[section]
 		[page=no,
-			number=yes,
+			number=no,
 			header=,
 			sectionsegments=section,
-			numbercommand={\DAN},
+			%numbercommand={\DAN},
 			alternative=,
 			before={\blank},
 			after=,
-			style={\tfb \bf},
+			style={\ssc},
+%			textstyle={\kerncharacters[.3]},
 			inbetween=,]
 	
 	\setuphead[subsection]
-		[commandbefore={\startnarrower},
-			commandafter={\stopnarrower},
-			page=no,number=no,
+		[%commandbefore={\startnarrower},
+		%	commandafter={\stopnarrower},
+			page=no,number=yes,
 			header=,
 			sectionsegments=section,
 			numbercommand={},
 			alternative=,
 			before={\blank},
-			after={\blank},
-			style={\sc},
-			inbetween=,
-			align=middle]
+			after=,
+			style={\tfb},
+			inbetween={},
+			align=right]
 
 	\setuphead[subsubsection]
 		[page=no,
@@ -117,7 +125,7 @@
 
 
 % Diagnostics
-	\showframe
+%	\showframe
 
 % Modify pages to fit content
 %	\adaptlayout
@@ -127,11 +135,12 @@
 
 	
 \starttext
-
 	\startchapter
 		[title=Testing]
 		\input knuth
+		\section{testsection}
 		\input knuth
+		\subsection{testsubsection}
 		\input knuth
 	\stopchapter
 
