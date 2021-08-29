@@ -4,9 +4,11 @@
 % Fonts: typescripts
 %	\setupbodyfontenvironment[12pt][em=italic] %default
 	\setupbodyfont[domitian,12pt] %default
+    
+    \setupmargindata[location=outer,style={\switchtobodyfont[small]}]
 
 % Fonts: semantic names
-%	\definefont[mytitlefont][SerifItalic at 24 pt]
+%	\definefont[margintextstyle][Serif at 24 pt]
 
 % Define and use paper sizes
 	\definepapersize[5x8][width=5in,height=8in]
@@ -43,18 +45,29 @@
 %
 
 
-\setuppagenumbering
-	[location=,
-		alternative=doublesided]
-%	[location=,]
+\setuppagenumbering [location=, alternative=doublesided]
 
 % Headers and footers
 
+\setupheader[style=\it]
+
+\startsetups testheader
+\expanded{\doifsomethingelse{\fetchmark[section][first]}}
+  {\getmarking[sectionnumber][top]~~\getmarking[section][top]}
+  {\getmarking[chapternumber]~~\getmarking[chapter]}
+\stopsetups
+
+\setupheadertexts
+	[] %recto inner
+	[\setups{testheader}]%recto outer
+	[\setups{testheader}]%verso outer
+	[] %verso inner
+
 \setupfootertexts
-	[]
-	[\userpagenumber] %recto
-	[\userpagenumber] %verso
-	[]
+	[] %recto inner
+	[\userpagenumber] %recto outer
+	[\userpagenumber] %verso outer
+	[] %verso inner
 
 % Indenting
 	\setupindenting[yes,medium,next]

@@ -4,8 +4,8 @@ utilitydata.comment={
  ["escape"]="[===[ ... ]===]",
  ["file"]="main-bringhurst",
  ["format"]="cont-en",
- ["stamp"]="2021.08.10 12:42",
- ["version"]=0x1.51eb851eb851fp+0,
+ ["stamp"]="2021.08.24 22:16",
+ ["version"]=0x1.547ae147ae148p+0,
 }
 
 if not utilitydata.job then utilitydata.job = { } end
@@ -19,7 +19,7 @@ if not utilitydata.job.variables then utilitydata.job.variables = { } end
 
 utilitydata.job.variables.collected={
  ["macros"]={},
- ["randomseed"]=0x1.fc2433acf00cp-1,
+ ["randomseed"]=0x1.eef3fe4ed46b2p-1,
  ["sectionblockorder"]={},
 }
 
@@ -36,105 +36,164 @@ if not utilitydata.job then utilitydata.job = { } end
 if not utilitydata.job.positions then utilitydata.job.positions = { } end
 
 utilitydata.job.positions.collected={
- ["md:h"]={
+ ["p"]={
   {
-   ["x"]=4661756,
+   ["i"]=1,
+   ["p"]=1,
+   ["pi"]=1179000,
+   ["y"]=45830593,
   },
   {
-   ["x"]=8391003,
+   ["i"]=2,
+   ["p"]=1,
+   ["pi"]=1179000,
+   ["y"]=38913473,
+  },
+  35948993,
+  31996353,
+  {
+   ["i"]=1,
+   ["p"]=1,
+   ["pi"]=1179000,
+   ["y"]=25573313,
+  },
+  {
+   ["i"]=3,
+   ["p"]=2,
+   ["pi"]=1179000,
+   ["y"]=50093603,
+  },
+  46140963,
+  {
+   ["i"]=4,
+   ["p"]=2,
+   ["pi"]=1179000,
+   ["y"]=39717923,
+  },
+  {
+   ["i"]=3,
+   ["p"]=2,
+   ["pi"]=1179000,
+   ["y"]=36753443,
+  },
+  32800803,
+  {
+   ["i"]=4,
+   ["p"]=4,
+   ["pi"]=1179000,
+   ["y"]=46107277,
+  },
+  {
+   ["i"]=3,
+   ["p"]=4,
+   ["pi"]=1179000,
+   ["y"]=43142797,
+  },
+  39190157,
+  33261197,
+  29308557,
+  {
+   ["i"]=2,
+   ["p"]=5,
+   ["pi"]=1179000,
+   ["y"]=35271203,
+  },
+  31318563,
+  {
+   ["i"]=1,
+   ["p"]=5,
+   ["pi"]=1179000,
+   ["y"]=24895523,
+  },
+  13531683,
+ },
+ ["page"]={
+  {
+   ["h"]=55380990,
+   ["w"]=39158276,
+   ["x"]=0,
+   ["y"]=0,
   },
  },
- ["p:1"]={
-  ["d"]=276684,
-  ["h"]=711476,
-  ["hs"]=26105517,
-  ["p"]=1,
-  ["pi"]=1179000,
-  ["x"]=4661756,
-  ["y"]=45830593,
+ ["shared"]={
+  ["x_h_d"]={},
+  ["x_h_d_hs"]={
+   {
+    ["d"]=276684,
+    ["h"]=711476,
+    ["hs"]=26105517,
+    ["x"]=4661756,
+   },
+   {
+    ["d"]=276684,
+    ["h"]=711476,
+    ["hs"]=26105517,
+    ["x"]=5840756,
+   },
+   {
+    ["d"]=276684,
+    ["h"]=711476,
+    ["hs"]=26105517,
+    ["x"]=9570003,
+   },
+   {
+    ["d"]=276684,
+    ["h"]=711476,
+    ["hs"]=26105517,
+    ["x"]=8391003,
+   },
+  },
+  ["x_y_w_h"]={
+   {
+    ["h"]=46379080,
+    ["w"]=26105517,
+    ["x"]=4661756,
+    ["y"]=4500955,
+   },
+   {
+    ["h"]=46379080,
+    ["w"]=26105517,
+    ["x"]=8391003,
+    ["y"]=4500955,
+   },
+  },
+  ["y_w_h_d"]={},
  },
- ["p:2"]={
-  ["d"]=276684,
-  ["h"]=711476,
-  ["hs"]=26105517,
-  ["p"]=1,
-  ["pi"]=1179000,
-  ["x"]=5840756,
-  ["y"]=38913473,
+ ["text"]={
+  {
+   ["i"]=1,
+   ["p"]=1,
+  },
+  {
+   ["i"]=2,
+   ["p"]=2,
+  },
+  {
+   ["i"]=1,
+   ["p"]=3,
+  },
+  {
+   ["i"]=2,
+   ["p"]=4,
+  },
+  {
+   ["i"]=1,
+   ["p"]=5,
+  },
+  {
+   ["i"]=2,
+   ["p"]=6,
+  },
  },
- ["p:3"]={
-  ["d"]=276684,
-  ["h"]=711476,
-  ["hs"]=26105517,
-  ["p"]=1,
-  ["pi"]=1179000,
-  ["x"]=5840756,
-  ["y"]=35948993,
- },
- ["p:4"]={
-  ["d"]=276684,
-  ["h"]=711476,
-  ["hs"]=26105517,
-  ["p"]=1,
-  ["pi"]=1179000,
-  ["x"]=5840756,
-  ["y"]=31996353,
- },
- ["p:5"]={
-  ["d"]=276684,
-  ["h"]=711476,
-  ["hs"]=26105517,
-  ["p"]=1,
-  ["pi"]=1179000,
-  ["x"]=4661756,
-  ["y"]=25573313,
- },
- ["p:6"]={
-  ["d"]=276684,
-  ["h"]=711476,
-  ["hs"]=26105517,
-  ["p"]=2,
-  ["pi"]=1179000,
-  ["x"]=8391003,
-  ["y"]=46107277,
- },
- ["p:7"]={
-  ["d"]=276684,
-  ["h"]=711476,
-  ["hs"]=26105517,
-  ["p"]=2,
-  ["pi"]=1179000,
-  ["x"]=9570003,
-  ["y"]=43142797,
- },
- ["p:8"]={
-  ["d"]=276684,
-  ["h"]=711476,
-  ["hs"]=26105517,
-  ["p"]=2,
-  ["pi"]=1179000,
-  ["x"]=9570003,
-  ["y"]=39190157,
- },
- ["page:1"]={
-  ["h"]=55380990,
-  ["w"]=39158276,
-  ["x"]=0,
-  ["y"]=0,
- },
- ["text:1"]={
-  ["h"]=46379080,
-  ["p"]=1,
-  ["w"]=26105517,
-  ["x"]=4661756,
-  ["y"]=4500955,
- },
- ["text:2"]={
-  ["h"]=46379080,
-  ["p"]=2,
-  ["w"]=26105517,
-  ["x"]=8391003,
-  ["y"]=4500955,
+ ["user"]={
+  ["md:h"]={
+   {
+    ["x"]=4661756,
+   },
+   {
+    ["x"]=8391003,
+   },
+  },
  },
 }
 
@@ -154,7 +213,7 @@ if not utilitydata.job then utilitydata.job = { } end
 if not utilitydata.job.pagestates then utilitydata.job.pagestates = { } end
 
 utilitydata.job.pagestates.collected={
- ["margintext"]={ 1, 2 },
+ ["margintext"]={ 1, 4 },
 }
 
 if not utilitydata.structures then utilitydata.structures = { } end
@@ -188,6 +247,30 @@ utilitydata.structures.sections.collected={
   ["conversionset"]="default",
   ["language"]="sv",
   ["numbers"]=3,
+  ["separatorset"]="default",
+  ["set"]="all",
+ },
+ {
+  ["block"]="bodypart",
+  ["conversionset"]="default",
+  ["language"]="sv",
+  ["numbers"]=4,
+  ["separatorset"]="default",
+  ["set"]="all",
+ },
+ {
+  ["block"]="bodypart",
+  ["conversionset"]="default",
+  ["language"]="sv",
+  ["numbers"]=5,
+  ["separatorset"]="default",
+  ["set"]="all",
+ },
+ {
+  ["block"]="bodypart",
+  ["conversionset"]="default",
+  ["language"]="sv",
+  ["numbers"]=6,
   ["separatorset"]="default",
   ["set"]="all",
  },
@@ -234,10 +317,10 @@ utilitydata.structures.counters.collected={
   { 0, 0, 0 },
  },
  ["realpage"]={
-  { 2 },
+  { 6 },
  },
  ["subpage"]={
-  { 2 },
+  { 6 },
  },
  ["table"]={
   { 0, 0, 0 },
@@ -246,7 +329,7 @@ utilitydata.structures.counters.collected={
   { 0 },
  },
  ["userpage"]={
-  { 2 },
+  { 6 },
  },
 }
 
@@ -255,8 +338,8 @@ if not utilitydata.structures.lists then utilitydata.structures.lists = { } end
 
 utilitydata.structures.lists.collected={
  {
-  ["metadata"]=4,
-  ["numberdata"]=5,
+  ["metadata"]=7,
+  ["numberdata"]=8,
   ["references"]={
    ["block"]="bodypart",
    ["internal"]=1,
@@ -271,8 +354,8 @@ utilitydata.structures.lists.collected={
   },
  },
  {
-  ["metadata"]=6,
-  ["numberdata"]=7,
+  ["metadata"]=9,
+  ["numberdata"]=10,
   ["references"]={
    ["block"]="bodypart",
    ["internal"]=2,
@@ -287,19 +370,67 @@ utilitydata.structures.lists.collected={
   },
  },
  {
-  ["metadata"]=4,
-  ["numberdata"]=8,
+  ["metadata"]=9,
+  ["numberdata"]=11,
   ["references"]={
    ["block"]="bodypart",
    ["internal"]=3,
    ["realpage"]=2,
    ["section"]=3,
    ["x"]=34496520,
+   ["y"]=41447203,
+  },
+  ["titledata"]={
+   ["label"]="section",
+   ["title"]="Bla bla & other bla bla stuff",
+  },
+ },
+ {
+  ["metadata"]=7,
+  ["numberdata"]=12,
+  ["references"]={
+   ["block"]="bodypart",
+   ["internal"]=4,
+   ["realpage"]=4,
+   ["section"]=4,
+   ["x"]=34496520,
    ["y"]=48641007,
   },
   ["titledata"]={
    ["label"]="chapter",
    ["title"]="Andra",
+  },
+ },
+ {
+  ["metadata"]=9,
+  ["numberdata"]=13,
+  ["references"]={
+   ["block"]="bodypart",
+   ["internal"]=5,
+   ["realpage"]=5,
+   ["section"]=5,
+   ["x"]=30767273,
+   ["y"]=26624803,
+  },
+  ["titledata"]={
+   ["label"]="section",
+   ["title"]="test2",
+  },
+ },
+ {
+  ["metadata"]=9,
+  ["numberdata"]=14,
+  ["references"]={
+   ["block"]="bodypart",
+   ["internal"]=6,
+   ["realpage"]=5,
+   ["section"]=6,
+   ["x"]=30767273,
+   ["y"]=15260963,
+  },
+  ["titledata"]={
+   ["label"]="section",
+   ["title"]="test3",
   },
  },
 }
@@ -311,15 +442,43 @@ utilitydata.structures.pages.collected={
  {
   ["block"]="bodypart",
   ["number"]=1,
-  ["numberdata"]=9,
-  ["prefixdata"]=10,
+  ["numberdata"]=15,
+  ["prefixdata"]=16,
   ["state"]="start",
  },
  {
   ["block"]="bodypart",
   ["number"]=2,
-  ["numberdata"]=9,
-  ["prefixdata"]=10,
+  ["numberdata"]=15,
+  ["prefixdata"]=16,
+  ["state"]="start",
+ },
+ {
+  ["block"]="bodypart",
+  ["number"]=3,
+  ["numberdata"]=15,
+  ["prefixdata"]=16,
+  ["state"]="start",
+ },
+ {
+  ["block"]="bodypart",
+  ["number"]=4,
+  ["numberdata"]=15,
+  ["prefixdata"]=16,
+  ["state"]="start",
+ },
+ {
+  ["block"]="bodypart",
+  ["number"]=5,
+  ["numberdata"]=15,
+  ["prefixdata"]=16,
+  ["state"]="start",
+ },
+ {
+  ["block"]="bodypart",
+  ["number"]=6,
+  ["numberdata"]=15,
+  ["prefixdata"]=16,
   ["state"]="start",
  },
 }
@@ -393,7 +552,10 @@ utilitydata.job.packed={
  ["index"]={
   { 0, 1 },
   { 0, 1, 1 },
+  { 0, 1, 2 },
   { 0, 2 },
+  { 0, 2, 1 },
+  { 0, 2, 2 },
   {
    ["catcodes"]=9,
    ["coding"]="tex",
@@ -431,6 +593,30 @@ utilitydata.job.packed={
    ["conversionset"]="default",
    ["language"]="sv",
    ["numbers"]=3,
+   ["separatorset"]="default",
+   ["set"]="all",
+  },
+  {
+   ["block"]="bodypart",
+   ["conversionset"]="default",
+   ["language"]="sv",
+   ["numbers"]=4,
+   ["separatorset"]="default",
+   ["set"]="all",
+  },
+  {
+   ["block"]="bodypart",
+   ["conversionset"]="default",
+   ["language"]="sv",
+   ["numbers"]=5,
+   ["separatorset"]="default",
+   ["set"]="all",
+  },
+  {
+   ["block"]="bodypart",
+   ["conversionset"]="default",
+   ["language"]="sv",
+   ["numbers"]=6,
    ["separatorset"]="default",
    ["set"]="all",
   },
