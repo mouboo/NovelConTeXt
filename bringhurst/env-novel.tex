@@ -1,0 +1,124 @@
+% Language
+	\mainlanguage[sv]
+
+% Fonts: typescripts
+%	\setupbodyfontenvironment[12pt][em=italic] %default
+	\setupbodyfont[domitian,12pt] %default
+
+% Fonts: semantic names
+%	\definefont[mytitlefont][SerifItalic at 24 pt]
+
+% Define and use paper sizes
+	\definepapersize[5x8][width=5in,height=8in]
+	\definepapersize[demy8vo][width=5.5in,height=8.5in]
+	\definepapersize[6x9][width=6in,height=9in]
+	\definepapersize[royal8vo][width=6.14in,height=9.21in]
+	\definepapersize[myPaperSize][height=297mm,width=210mm]
+	\definepapersize[myPageSize][height=150mm,width=150mm]
+
+	\setuppapersize[A4][A4]
+
+% Set layout of page
+	\setuplayout
+		[location={middle, left, doublesided},
+			marking=on,
+%			backspace=20 mm,
+%			leftmargindistance=5 mm,
+%			leftmargin=10 mm,
+			cutspace=40 mm,
+			rightmargindistance=5 mm,
+			rightmargin=30 mm,
+			width=140 mm,
+			topspace=15 mm,
+			height=middle,
+%lines=37,
+			header=12 pt,
+			headerdistance=14 pt,
+			footer=12 pt,
+			footerdistance=14 pt,
+%			bottomspace=0.9 in,
+%			cutspace=.875 in,
+			]
+
+%
+
+
+\setuppagenumbering
+	[location=,
+		alternative=doublesided]
+%	[location=,]
+
+% Headers and footers
+
+\setupfootertexts
+	[]
+	[\userpagenumber] %recto
+	[\userpagenumber] %verso
+	[]
+
+% Indenting
+	\setupindenting[yes,medium,next]
+%	\setupwhitespace[medium]
+
+% Setup headings	
+
+	\setuphead[part]				
+		[
+			placehead=yes,
+			alternative=middle,
+			before=\startstandardmakeup,
+			after=\stopstandardmakeup,
+			header=empty]
+		
+	\setuphead[chapter]
+		[page=yes,
+			number=yes,
+			style=\tf,
+			deeptextcommand=\WORD,
+			textstyle={\kerncharacters[.1]},
+%			sectionsegments=chapter,
+%			align=nothyphenated,
+			header=empty,
+%			numbercommand={},
+%			align=middle,
+			before={\blank[force,big]},
+			after={\blank\hrule\blank[14pt]}]	
+			
+	\setuphead[section]
+		[page=no,
+			number=yes,
+			header=,
+%			sectionsegments=section,
+			%numbercommand={\DAN},
+			alternative=,
+			before=\blank,
+			after=\blank,
+			style={\sc},
+			textstyle={\kerncharacters[.1]},
+			inbetween=,]
+	
+	\setuphead[subsection]
+		[%commandbefore={\startnarrower},
+		%	commandafter={\stopnarrower},
+			page=no,number=yes,
+			header=,
+			sectionsegments=section,
+			numbercommand={},
+			alternative=,
+			before={\blank},
+			after=,
+			style={\tfb},
+			inbetween={},
+			align=right]
+
+% Diagnostics
+%	\showframe
+
+% Modify pages to fit content
+%	\adaptlayout
+%		[<pages>]
+%		[height=+1cm,
+%			lines=+1]
+
+	
+
