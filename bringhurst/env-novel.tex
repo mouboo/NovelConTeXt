@@ -3,12 +3,14 @@
 
 % Fonts: typescripts
 %	\setupbodyfontenvironment[12pt][em=italic] %default
-	\setupbodyfont[domitian,12pt] %default
+	\setupbodyfont[domitian,11pt] %default
     
     \setupmargindata[location=outer,style={\switchtobodyfont[small]}]
 
 % Fonts: semantic names
 %	\definefont[margintextstyle][Serif at 24 pt]
+
+\setupalign[hz,hanging]
 
 % Define and use paper sizes
 	\definepapersize[5x8][width=5in,height=8in]
@@ -17,6 +19,7 @@
 	\definepapersize[royal8vo][width=6.14in,height=9.21in]
 	\definepapersize[myPaperSize][height=297mm,width=210mm]
 	\definepapersize[myPageSize][height=150mm,width=150mm]
+	\definepapersize[bringhurst][height=232mm,width=134mm]
 
 	\setuppapersize[A4][A4]
 
@@ -27,17 +30,17 @@
 %			backspace=20 mm,
 %			leftmargindistance=5 mm,
 %			leftmargin=10 mm,
-			cutspace=40 mm,
-			rightmargindistance=5 mm,
-			rightmargin=30 mm,
+			cutspace=46.66mm,
+			rightmargindistance=5mm,
+			rightmargin=30mm,
 			width=140 mm,
-			topspace=15 mm,
+			topspace=24 mm,
 			height=middle,
 %lines=37,
-			header=12 pt,
-			headerdistance=14 pt,
-			footer=12 pt,
-			footerdistance=14 pt,
+			header=11 pt,
+			headerdistance=12 pt,
+			footer=11 pt,
+			footerdistance=12 pt,
 %			bottomspace=0.9 in,
 %			cutspace=.875 in,
 			]
