@@ -3,7 +3,7 @@
 
 % Fonts: typescripts
 %	\setupbodyfontenvironment[12pt][em=italic] %default
-	\setupbodyfont[domitian,11pt] %default
+	\setupbodyfont[domitian,12pt] %default
     
     \setupmargindata[location=outer,style={\switchtobodyfont[small]}]
 
@@ -27,20 +27,20 @@
 	\setuplayout
 		[location={middle, left, doublesided},
 			marking=on,
-%			backspace=20 mm,
-%			leftmargindistance=5 mm,
-%			leftmargin=10 mm,
-			cutspace=46.66mm,
-			rightmargindistance=5mm,
-			rightmargin=30mm,
-			width=140 mm,
-			topspace=24 mm,
-			height=middle,
+			backspace=66.4pt,
+			leftmargindistance=0mm,
+			leftmargin=0mm,
+			width=398.3pt,
+			%cutspace=0.66in,
+			rightmargindistance=0mm,
+			rightmargin=0mm,
+			topspace=66.4pt,
+			height=645.8pt,
 %lines=37,
-			header=11 pt,
-			headerdistance=12 pt,
-			footer=11 pt,
-			footerdistance=12 pt,
+			header=0 pt,
+			headerdistance=0 pt,
+			footer=0pt,
+			footerdistance=0 pt,
 %			bottomspace=0.9 in,
 %			cutspace=.875 in,
 			]
@@ -52,19 +52,19 @@
 
 % Headers and footers
 
-\setupheader[style=\it]
+%\setupheader[style=\it]
 
-\startsetups testheader
-\expanded{\doifsomethingelse{\fetchmark[section][first]}}
-  {\getmarking[sectionnumber][top]~~\getmarking[section][top]}
-  {\getmarking[chapternumber]~~\getmarking[chapter]}
-\stopsetups
+%\startsetups testheader
+%\expanded{\doifsomethingelse{\fetchmark[section][first]}}
+%  {\getmarking[sectionnumber][top]~~\getmarking[section][top]}
+%  {\getmarking[chapternumber]~~\getmarking[chapter]}
+%\stopsetups
 
-\setupheadertexts
-	[] %recto inner
-	[\setups{testheader}]%recto outer
-	[\setups{testheader}]%verso outer
-	[] %verso inner
+%\setupheadertexts
+%	[] %recto inner
+%	[\setups{testheader}]%recto outer
+%	[\setups{testheader}]%verso outer
+%	[] %verso inner
 
 \setupfootertexts
 	[] %recto inner
