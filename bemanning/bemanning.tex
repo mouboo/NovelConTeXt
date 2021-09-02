@@ -1,0 +1,79 @@
+%\usemodule[tikz]
+%\usemodule[pgfplots]
+
+\mainlanguage[sv]
+
+\setuppapersize[A4][A4]
+\setuppagenumbering [location=bottom]
+
+%\setupbodyfont[pagella,11pt]
+
+\setupindenting[yes,medium,next]
+
+	\setuphead[chapter]
+		[page=yes,
+			number=no,
+			style=\tfa,
+			deeptextcommand=\WORD,
+			textstyle={\kerncharacters[.1]},
+%			sectionsegments=chapter,
+%			align=nothyphenated,
+			header=empty,
+%			numbercommand={},
+%			align=middle,
+			before=,
+			after={\blank\hrule\blank[14pt]}]
+            
+	\setuphead[section]
+		[page=no,
+			number=no,
+			header=,
+%			sectionsegments=section,
+			%numbercommand={\DAN},
+			alternative=,
+			before=\blank,
+			after=\blank,
+			style={\sc},
+			textstyle={\kerncharacters[.1]},
+			inbetween=,]
+            
+%\showframe
+
+\setuplayout[header=0pt,headerdistance=0pt]
+
+\starttext
+\chapter{Mått på bemanning}
+
+Nyligen kom frågan upp hur vi fysioterapeuter/sjukgymnaster är fördelade på boendena, speciellt med tanke på att en tjänst är tänkt som resurs att använda där det behövs. Jag började fundera på hur man skulle kunna kvantifiera och jämföra detta behov. Ett naivt sätt skulle kunna vara att ställa frågan: om en given fysioterapeut under en vecka besökte alla sina patienter, hur mycket tid skulle varje patient få i genomsnitt? Dvs antalet fysiominuter i veckan per patient. För varje boende kan man räkna ut:
+\startformula
+\frac{(\text{Jobbade timmar per vecka} \times 60)}{\text{Antal boende}}
+\stopformula
+Jag jobbar exempelvis heltid, två dagar i veckan på Lars Kristoffers väg, som har 32 patienter. Detta boende får alltså 16 timmar $\times$ 60 minuter, delat på 32 patienter. 
+
+Reimersdal
+Norrdala
+Vevrehemmet
+Lars Kristoffers väg
+Fästan
+
+
+\section{Mått på bemanning}
+
+Hur?
+
+\section{Data}
+
+(pgfplot stuff)
+
+%\starttikzpicture
+%        \startaxis[     xmin=0,xmax=300,
+%                        title=http://cryogenics.nist.gov/,
+%                        xlabel=$T$ (K),
+%                        ylabel=$(L-L_{293})/L_{293}$,
+%                        legend style={at={(0.95,0.05)},anchor=south east},
+%                        width=16cm ]
+%
+%        \stopaxis
+%\stoptikzpicture
+
+\stoptext
