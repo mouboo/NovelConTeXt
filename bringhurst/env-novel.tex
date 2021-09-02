@@ -3,7 +3,7 @@
 
 % Fonts: typescripts
 %	\setupbodyfontenvironment[12pt][em=italic] %default
-	\setupbodyfont[domitian,12pt] %default
+	\setupbodyfont[domitian,10pt] %default
     
     \setupmargindata[location=outer,style={\switchtobodyfont[small]}]
 
@@ -21,31 +21,26 @@
 	\definepapersize[myPageSize][height=150mm,width=150mm]
 	\definepapersize[bringhurst][height=232mm,width=134mm]
 
-	\setuppapersize[A4][A4]
+	\setuppapersize[6x9][6x9]
 
 % Set layout of page
 	\setuplayout
 		[location={middle, left, doublesided},
 			marking=on,
-			backspace=66.4pt,
-			leftmargindistance=0mm,
-			leftmargin=0mm,
-			width=398.3pt,
-			%cutspace=0.66in,
-			rightmargindistance=0mm,
-			rightmargin=0mm,
-			topspace=66.4pt,
-			height=685.8pt, %645.8pt + 28pt+12pt = 681.8pt 
-%lines=37,
-			header=0 pt,
-			headerdistance=0 pt,
-			footer=12pt,
-			footerdistance=28 pt,
-%			bottomspace=0.9 in,
-%			cutspace=.875 in,
-			]
-
-%
+			%top to bottom
+			topspace=48pt,
+			header=0pt,
+			headerdistance=0pt,
+			height=526pt, %add footer + footerdistance
+			footer=10pt,
+			footerdistance=24pt,
+			%left to right
+			backspace=48pt,
+			leftmargin=0pt,
+			leftmargindistance=0pt,
+			width=289pt,
+			rightmargin=0pt,
+			rightmargindistance=0pt]
 
 
 \setuppagenumbering [location=, alternative=doublesided]
@@ -89,7 +84,7 @@
 	\setuphead[chapter]
 		[page=right,
 			number=yes,
-			style=\tf,
+			style=\tfa,
 			deeptextcommand=\WORD,
 			textstyle={\kerncharacters[.1]},
 %			sectionsegments=chapter,
@@ -98,7 +93,7 @@
 %			numbercommand={},
 %			align=middle,
 			before={\blank[force,big]},
-			after={\blank\hrule\blank[14pt]}]	
+			after={\blank\hrule\blank[14pt]},]	
 			
 	\setuphead[section]
 		[page=no,
