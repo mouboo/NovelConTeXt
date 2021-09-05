@@ -1,12 +1,18 @@
-%\usemodule[tikz]
-%\usemodule[pgfplots]
+\usemodule[tikz]
+\usemodule[pgfplots]
 
 \mainlanguage[sv]
 
 \setuppapersize[A4][A4]
 \setuppagenumbering [location=bottom]
 
-%\setupbodyfont[pagella,11pt]
+\setupbodyfont[schola,10pt]
+
+\setuplayout[backspace=1.2in,
+             width=middle,
+             topspace=1.2in]
+
+%\showframe
 
 \setupindenting[yes,medium,next]
 
@@ -46,9 +52,9 @@
 
 Nyligen kom frågan upp hur vi fysioterapeuter/sjukgymnaster är fördelade på boendena, speciellt med tanke på att en tjänst är tänkt som resurs att använda där det behövs. Jag började fundera på hur man skulle kunna kvantifiera och jämföra detta behov. Ett naivt sätt skulle kunna vara att ställa frågan: om en given fysioterapeut under en vecka besökte alla sina patienter, hur mycket tid skulle varje patient få i genomsnitt? Dvs antalet fysiominuter i veckan per patient. För varje boende kan man räkna ut:
 \startformula
-\frac{(\text{Jobbade timmar per vecka} \times 60)}{\text{Antal boende}}
+\frac{(\text{Jobbade timmar per vecka} \times 60\ \text{minuter})}{\text{Antal boende}}
 \stopformula
-Jag jobbar exempelvis heltid, två dagar i veckan på Lars Kristoffers väg, som har 32 patienter. Detta boende får alltså 16 timmar $\times$ 60 minuter, delat på 32 patienter. 
+Jag jobbar exempelvis heltid, två dagar i veckan på Lars Kristoffers väg, som har 32 patienter. Detta boende får alltså (40 timmar $\times \frac{2}{5} = 16$) 16 timmar $\times$ 60 minuter, delat på 32 patienter. 
 
 Reimersdal
 Norrdala
@@ -56,6 +62,42 @@ Vevrehemmet
 Lars Kristoffers väg
 Fästan
 
+\startsetups booktabs
+  \setupTABLE[frame=off, rulethickness=0.4pt, loffset=1em]
+  \setupTABLE[column][first][loffset=0em]
+  \setupTABLE[row][first][topframe=on, rulethickness=0.8pt]
+  \setupTABLE[row][last] [bottomframe=on, rulethickness=0.8pt]
+\stopsetups
+
+\placetable{Fysiominuter per patient per vecka}{
+\bTABLE[setups=booktabs]
+  \setupTABLE[column][3][align=flushright]
+  \bTR
+\bTD Boende \eTD
+\bTD (Måttenhet) \eTD
+\bTD Kommentar (\$) \eTD
+  \eTR
+  \bTR[topframe=on]
+\bTD Reimersdal \eTD
+\bTD stuffed \eTD
+\bTD 92.50   \eTD
+  \eTR
+  \bTR
+\bTD Norrdala \eTD
+\bTD stuffed \eTD
+\bTD 33.33 \eTD
+  \eTR
+  \bTR
+\bTD Vevrehemmet \eTD
+\bTD frozen\eTD
+\bTD 8.99  \eTD
+  \eTR
+  \bTR
+\bTD Lars Kristoffers väg \eTD
+\bTD frozen\eTD
+\bTD 8.99  \eTD
+  \eTR
+\eTABLE}
 
 \section{Mått på bemanning}
 
@@ -65,15 +107,43 @@ Hur?
 
 (pgfplot stuff)
 
-%\starttikzpicture
-%        \startaxis[     xmin=0,xmax=300,
-%                        title=http://cryogenics.nist.gov/,
-%                        xlabel=$T$ (K),
-%                        ylabel=$(L-L_{293})/L_{293}$,
-%                        legend style={at={(0.95,0.05)},anchor=south east},
-%                        width=16cm ]
-%
-%        \stopaxis
-%\stoptikzpicture
+
+\starttikzpicture
+        \startaxis[
+%nodes near coords,
+xmin=0.5, xmax=6,
+xtick={1,2,3,4,5},
+axis lines=left,
+xticklabels={
+Reimersdal,Norrdala,Vevrehemmet,Lars Kristoffers väg,Fästan},
+x tick label style={rotate=45, anchor=north east},
+ylabel={myylabel},
+ymin=0,
+]
+
+\addplot[ybar,bar width=0.6cm,fill=gray,draw=black,nodes near coords] plot coordinates{(1,10)
+(2,20)
+(3,40)
+(4,60)
+(5,10)}
+;
+
+
+%% This is just to add a zero line for clarity
+%\addplot [
+%color=black,
+%dashed,
+%forget plot
+%]
+%table{
+%0 30
+%5 30
+%};
+\draw [dashed] 
+        (axis cs: 0,40) -- (axis cs: 5,40)
+        node[right] {Medel};
+
+        \stopaxis
+\stoptikzpicture
 
 \stoptext

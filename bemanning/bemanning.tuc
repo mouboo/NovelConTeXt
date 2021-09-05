@@ -61,6 +61,7 @@ if not utilitydata.job then utilitydata.job = { } end
 if not utilitydata.job.pagestates then utilitydata.job.pagestates = { } end
 
 utilitydata.job.pagestates.collected={
+ ["float"]={ 1 },
 }
 
 if not utilitydata.structures then utilitydata.structures = { } end
@@ -143,19 +144,19 @@ utilitydata.structures.counters.collected={
   { 0, 0 },
  },
  ["realpage"]={
-  { 1 },
+  { 2 },
  },
  ["subpage"]={
-  { 1 },
+  { 2 },
  },
  ["table"]={
-  { 0, 0 },
+  { 0, 1 },
  },
  ["textnote:note"]={
   { 0 },
  },
  ["userpage"]={
-  { 1 },
+  { 2 },
  },
 }
 
@@ -179,10 +180,24 @@ utilitydata.structures.lists.collected={
  },
  {
   ["metadata"]=6,
-  ["numberdata"]=7,
+  ["numberdata"]=8,
+  ["prefixdata"]=9,
+  ["references"]={
+   ["internal"]=2,
+   ["realpage"]=1,
+   ["section"]=1,
+   ["view"]="fit",
+  },
+  ["titledata"]={
+   ["title"]="Fysiominuter per patient per vecka",
+  },
+ },
+ {
+  ["metadata"]=10,
+  ["numberdata"]=11,
   ["references"]={
    ["block"]="bodypart",
-   ["internal"]=2,
+   ["internal"]=3,
    ["realpage"]=1,
    ["section"]=2,
   },
@@ -192,11 +207,11 @@ utilitydata.structures.lists.collected={
   },
  },
  {
-  ["metadata"]=6,
-  ["numberdata"]=8,
+  ["metadata"]=10,
+  ["numberdata"]=12,
   ["references"]={
    ["block"]="bodypart",
-   ["internal"]=3,
+   ["internal"]=4,
    ["realpage"]=1,
    ["section"]=3,
   },
@@ -214,8 +229,15 @@ utilitydata.structures.pages.collected={
  {
   ["block"]="bodypart",
   ["number"]=1,
-  ["numberdata"]=9,
-  ["prefixdata"]=10,
+  ["numberdata"]=13,
+  ["prefixdata"]=14,
+  ["state"]="start",
+ },
+ {
+  ["block"]="bodypart",
+  ["number"]=2,
+  ["numberdata"]=13,
+  ["prefixdata"]=14,
   ["state"]="start",
  },
 }
@@ -306,6 +328,24 @@ utilitydata.job.packed={
    ["numbers"]=1,
    ["separatorset"]="default",
    ["set"]="all",
+  },
+  {
+   ["catcodes"]=9,
+   ["coding"]="tex",
+   ["kind"]="float",
+   ["level"]=2,
+   ["name"]="table",
+  },
+  { 1 },
+  {
+   ["conversionset"]="number",
+   ["counter"]="table",
+   ["numbers"]=7,
+  },
+  {
+   ["connector"]=".",
+   ["prefix"]="yes",
+   ["segments"]="2:2",
   },
   {
    ["catcodes"]=9,
