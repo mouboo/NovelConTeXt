@@ -48,19 +48,14 @@
 \setuplayout[header=0pt,headerdistance=0pt]
 
 \starttext
-\chapter{Mått på bemanning}
+\chapter{Ett mått på bemanning}
 
-Nyligen kom frågan upp hur vi fysioterapeuter/sjukgymnaster är fördelade på boendena, speciellt med tanke på att en tjänst är tänkt som resurs att använda där det behövs. Jag började fundera på hur man skulle kunna kvantifiera och jämföra detta behov. Ett naivt sätt skulle kunna vara att ställa frågan: om en given fysioterapeut under en vecka besökte alla sina patienter, hur mycket tid skulle varje patient få i genomsnitt? Dvs antalet fysiominuter i veckan per patient. För varje boende kan man räkna ut:
+
 \startformula
 \frac{(\text{Jobbade timmar per vecka} \times 60\ \text{minuter})}{\text{Antal boende}}
 \stopformula
 Jag jobbar exempelvis heltid, två dagar i veckan på Lars Kristoffers väg, som har 32 patienter. Detta boende får alltså (40 timmar $\times \frac{2}{5} = 16$) 16 timmar $\times$ 60 minuter, delat på 32 patienter. 
 
-Reimersdal
-Norrdala
-Vevrehemmet
-Lars Kristoffers väg
-Fästan
 
 \startsetups booktabs
   \setupTABLE[frame=off, rulethickness=0.4pt, loffset=1em]
@@ -71,32 +66,40 @@ Fästan
 
 \placetable{Fysiominuter per patient per vecka}{
 \bTABLE[setups=booktabs]
-  \setupTABLE[column][3][align=flushright]
+  \setupTABLE[column][2][align=flushright]
   \bTR
 \bTD Boende \eTD
-\bTD (Måttenhet) \eTD
-\bTD Kommentar (\$) \eTD
+\bTD Minuter\eTD
   \eTR
   \bTR[topframe=on]
-\bTD Reimersdal \eTD
-\bTD stuffed \eTD
-\bTD 92.50   \eTD
-  \eTR
-  \bTR
-\bTD Norrdala \eTD
-\bTD stuffed \eTD
-\bTD 33.33 \eTD
+\bTD Lars Kristoffers väg \eTD
+\bTD 32 \eTD
   \eTR
   \bTR
 \bTD Vevrehemmet \eTD
-\bTD frozen\eTD
-\bTD 8.99  \eTD
+\bTD 34 \eTD
   \eTR
   \bTR
-\bTD Lars Kristoffers väg \eTD
-\bTD frozen\eTD
-\bTD 8.99  \eTD
+\bTD Norrdala \eTD
+\bTD 26 \eTD
   \eTR
+  \bTR
+\bTD Reimersdal \eTD
+\bTD 26 \eTD
+  \eTR
+  \bTR
+\bTD Linegården \eTD
+\bTD 40 \eTD
+  \eTR
+  \bTR
+\bTD Linelyckan \eTD
+\bTD 48 \eTD
+  \eTR
+  \bTR
+\bTD Fästan \eTD
+\bTD 34 \eTD
+  \eTR
+
 \eTABLE}
 
 \section{Mått på bemanning}
