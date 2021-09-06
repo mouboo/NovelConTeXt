@@ -50,11 +50,13 @@
 \starttext
 \chapter{Ett mått på bemanning}
 
+Fysioterapeuter har ansvar för olika stora patientgrupper och jobbar olika många timmar i veckan på olika ställen. Av ren nyfikenhet ville jag se om detta kunde jämföras på ett enkelt sätt. Med parametrarna antal patienter och antal jobbade timmar per vecka kan man, möjligen naivt, ställa frågan: om en given fysioterapeut besökte alla sina patienter lika mycket under en vecka, hur många minuter skulle varje patient få? Vi kan kalla detta mått "Fysiominuter per patient per vecka": 
 
 \startformula
 \frac{(\text{Jobbade timmar per vecka} \times 60\ \text{minuter})}{\text{Antal boende}}
 \stopformula
-Jag jobbar exempelvis heltid, två dagar i veckan på Lars Kristoffers väg, som har 32 patienter. Detta boende får alltså (40 timmar $\times \frac{2}{5} = 16$) 16 timmar $\times$ 60 minuter, delat på 32 patienter. 
+
+Exempelvis, jag jobbar heltid, två dagar i veckan på Lars Kristoffers väg, som har 32 patienter. Detta boende får alltså (40 timmar $\times \frac{2}{5} \text{dagar} = 16$) 16 timmar $\times$ 60 minuter, delat på 32 patienter. 
 
 
 \startsetups booktabs
@@ -64,7 +66,7 @@ Jag jobbar exempelvis heltid, två dagar i veckan på Lars Kristoffers väg, som
   \setupTABLE[row][last] [bottomframe=on, rulethickness=0.8pt]
 \stopsetups
 
-\placetable{Fysiominuter per patient per vecka}{
+\placetable[right]{Fysiominuter per patient per vecka}{
 \bTABLE[setups=booktabs]
   \setupTABLE[column][2][align=flushright]
   \bTR
@@ -99,6 +101,11 @@ Jag jobbar exempelvis heltid, två dagar i veckan på Lars Kristoffers väg, som
 \bTD Fästan \eTD
 \bTD 34 \eTD
   \eTR
+  \bTR
+\bTD \it Medelvärde \eTD
+\bTD \it 34 \eTD
+  \eTR
+  
 
 \eTABLE}
 
@@ -114,21 +121,25 @@ Hur?
 \starttikzpicture
         \startaxis[
 %nodes near coords,
-xmin=0.5, xmax=6,
-xtick={1,2,3,4,5},
+xmin=0.5, xmax=7.5,
+xtick={1,2,3,4,5,6,7},
 axis lines=left,
 xticklabels={
-Reimersdal,Norrdala,Vevrehemmet,Lars Kristoffers väg,Fästan},
+Lars Kristoffers väg, Vevrehemmet, Norrdala, Reimersdal, Linegården, Linelyckan, Fästan},
 x tick label style={rotate=45, anchor=north east},
 ylabel={myylabel},
 ymin=0,
+ymax=50,
 ]
 
-\addplot[ybar,bar width=0.6cm,fill=gray,draw=black,nodes near coords] plot coordinates{(1,10)
-(2,20)
-(3,40)
-(4,60)
-(5,10)}
+\addplot[ybar,bar width=0.6cm,fill=gray,draw=black,nodes near coords] plot coordinates{
+(1,32)
+(2,34)
+(3,26)
+(4,26)
+(5,40)
+(6,48)
+(7,34)}
 ;
 
 
@@ -142,9 +153,9 @@ ymin=0,
 %0 30
 %5 30
 %};
-\draw [dashed] 
-        (axis cs: 0,40) -- (axis cs: 5,40)
-        node[right] {Medel};
+%\draw [dashed] 
+%        (axis cs: 0,34) -- (axis cs: 8,34)
+%        node[right] {Medel};
 
         \stopaxis
 \stoptikzpicture
