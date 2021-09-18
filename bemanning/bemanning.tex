@@ -1,61 +1,79 @@
 \usemodule[tikz]
+
 \usemodule[pgfplots]
 
 \mainlanguage[sv]
 
+ 
+
 \setuppapersize[A4][A4]
+
 \setuppagenumbering [location=bottom]
+
+ 
 
 \setupbodyfont[schola,10pt]
 
-\setuplayout[backspace=1.2in,
+ 
+
+\setuplayout[backspace=1in,
              width=middle,
-             topspace=1.2in]
+            topspace=1in,
+            footer=12pt]
+
+ 
 
 %\showframe
+
+ 
 
 \setupindenting[yes,medium,next]
 
-	\setuphead[chapter]
-		[page=yes,
-			number=no,
-			style=\tfa,
-			deeptextcommand=\WORD,
-			textstyle={\kerncharacters[.1]},
-%			sectionsegments=chapter,
-%			align=nothyphenated,
-			header=empty,
-%			numbercommand={},
-%			align=middle,
-			before=,
-			after={\blank\hrule\blank[14pt]}]
-            
-	\setuphead[section]
-		[page=no,
-			number=no,
-			header=,
-%			sectionsegments=section,
-			%numbercommand={\DAN},
-			alternative=,
-			before=\blank,
-			after=\blank,
-			style={\sc},
-			textstyle={\kerncharacters[.1]},
-			inbetween=,]
-            
+ 
+
+\setuphead[chapter][page=yes,number=no,style=\tfa,deeptextcommand=\WORD,
+textstyle={\kerncharacters[.1]},
+%sectionsegments=chapter,
+%align=nothyphenated,
+header=empty,
+%numbercommand={},
+%align=middle,
+before=,
+after={\blank\hrule\blank[14pt]}]
+
+\setuphead[section][page=no,number=no,header=,
+%sectionsegments=section,%numbercommand={\DAN},
+alternative=,before=\blank,
+after=\blank,
+style={\sc},
+textstyle={\kerncharacters[.1]},inbetween=,]
+
+           
+
 %\showframe
+
+ 
 
 \setuplayout[header=0pt,headerdistance=0pt]
 
-\starttext
-\chapter{Ett mått på bemanning}
+ 
 
+\starttext
+
+\chapter{Fysiominuter per patient per vecka}
+
+Fysioterapeuter har ansvar för olika stora patientgrupper och jobbar olika många timmar i veckan på olika ställen. Av ren nyfikenhet ville jag se om detta kunde jämföras på ett enkelt sätt. Med parametrarna antal patienter och antal jobbade timmar per vecka kan man, möjligen naivt, ställa frågan: om en given fysioterapeut fördelade sin arbetstid jämnt över alla sina patienter, hur många minuter skulle varje patient få? Vi kan kalla detta mått "Fysiominuter per patient per vecka":
 
 \startformula
 \frac{(\text{Jobbade timmar per vecka} \times 60\ \text{minuter})}{\text{Antal boende}}
 \stopformula
-Jag jobbar exempelvis heltid, två dagar i veckan på Lars Kristoffers väg, som har 32 patienter. Detta boende får alltså (40 timmar $\times \frac{2}{5} = 16$) 16 timmar $\times$ 60 minuter, delat på 32 patienter. 
 
+Exempelvis, jag jobbar 40 timmar per vecka, men bara två dagar i veckan på Lars Kristoffers väg, som har 32 patienter. Jag är alltså på Lars Kristoffers väg 40 
+timmar $\times 60\ \text{minuter}\ \times\ \frac{2}{5} \text{dagar}\ =\ $ 960 minuter. Detta delat på 32 patienter blir 30 minuter per patient per vecka.
+
+Andra fysioterapeuter har två boenden som ligger bredvid varandra och som kan ses som ett enda stort boende tidsmässigt. Man kan då räkna antingen som ovan eller räkna på boendena sammanlagt, det blir samma siffror i slutändan.
+
+Frågan vad detta mått kan användas till lämnar jag öppen, och jag vill inte antyda att det säger speciellt mycket om behov och arbetsbelastning, men här är i alla fall siffrorna:
 
 \startsetups booktabs
   \setupTABLE[frame=off, rulethickness=0.4pt, loffset=1em]
@@ -63,6 +81,8 @@ Jag jobbar exempelvis heltid, två dagar i veckan på Lars Kristoffers väg, som
   \setupTABLE[row][first][topframe=on, rulethickness=0.8pt]
   \setupTABLE[row][last] [bottomframe=on, rulethickness=0.8pt]
 \stopsetups
+
+ 
 
 \placetable{Fysiominuter per patient per vecka}{
 \bTABLE[setups=booktabs]
@@ -73,7 +93,7 @@ Jag jobbar exempelvis heltid, två dagar i veckan på Lars Kristoffers väg, som
   \eTR
   \bTR[topframe=on]
 \bTD Lars Kristoffers väg \eTD
-\bTD 32 \eTD
+\bTD 30 \eTD
   \eTR
   \bTR
 \bTD Vevrehemmet \eTD
@@ -99,54 +119,51 @@ Jag jobbar exempelvis heltid, två dagar i veckan på Lars Kristoffers väg, som
 \bTD Fästan \eTD
 \bTD 34 \eTD
   \eTR
-
+  \bTR
+\bTD \it Medelvärde \eTD
+\bTD \it 34 \eTD
+  \eTR
 \eTABLE}
 
-\section{Mått på bemanning}
-
-Hur?
-
-\section{Data}
-
-(pgfplot stuff)
-
-
+\startalignment[middle]% or center
+\dontleavehmode
+\placefigure{Fysiominuter per patient per vecka}{
 \starttikzpicture
+
         \startaxis[
 %nodes near coords,
-xmin=0.5, xmax=6,
-xtick={1,2,3,4,5},
+width=7cm,
+xmin=0.5, xmax=7.5,
+xtick={1,2,3,4,5,6,7},
 axis lines=left,
 xticklabels={
-Reimersdal,Norrdala,Vevrehemmet,Lars Kristoffers väg,Fästan},
+Lars Kristoffers väg, Vevrehemmet, Norrdala, Reimersdal, Linegården, Linelyckan, Fästan},
 x tick label style={rotate=45, anchor=north east},
-ylabel={myylabel},
+ylabel={Minuter},
 ymin=0,
+ymax=50,
 ]
 
-\addplot[ybar,bar width=0.6cm,fill=gray,draw=black,nodes near coords] plot coordinates{(1,10)
-(2,20)
-(3,40)
-(4,60)
-(5,10)}
+%\draw [dashed]
+%        (axis cs: 0,34) -- (axis cs: 8,34)
+%        node[right] {Medel};
+
+\addplot[ybar,bar width=0.6cm,fill=gray,draw=black,nodes near coords] plot coordinates{
+(1,30)
+(2,34)
+(3,26)
+(4,26)
+(5,40)
+(6,48)
+(7,34)}
 ;
 
-
-%% This is just to add a zero line for clarity
-%\addplot [
-%color=black,
-%dashed,
-%forget plot
-%]
-%table{
-%0 30
-%5 30
-%};
-\draw [dashed] 
-        (axis cs: 0,40) -- (axis cs: 5,40)
-        node[right] {Medel};
-
         \stopaxis
-\stoptikzpicture
+
+\stoptikzpicture}
+\stopalignment
+
+ 
 
 \stoptext
+
