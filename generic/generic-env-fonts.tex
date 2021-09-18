@@ -1,0 +1,56 @@
+\startenvironment generic-env-fonts
+
+% Serif
+
+\definefontfeature
+  [domitian-normal]
+  [default]
+  [smcp=no,c2sc=no]
+
+\definefontfeature
+  [domitian-smallcaps]
+  [domitian-normal]
+  [smcp=yes,c2sc=yes]
+
+\starttypescript [serif] [domitian] [name]
+    \setups[font:fallback:serif]
+    \definefontsynonym [Serif]           [file:Domitian-Roman]      [features=domitian-normal]
+    \definefontsynonym [SerifBold]       [file:Domitian-Bold]       [features=domitian-normal]
+    \definefontsynonym [SerifItalic]     [file:Domitian-Italic]     [features=domitian-normal]
+    \definefontsynonym [SerifSlanted]    [file:Domitian-Italic]     [features=domitian-normal]
+    \definefontsynonym [SerifBoldItalic] [file:Domitian-BoldItalic] [features=domitian-normal]
+    \definefontsynonym [SerifBoldSlanted][file:Domitian-BoldItalic] [features=domitian-normal]
+    \definefontsynonym [SerifCaps]       [Serif]     	            [features=domitian-smallcaps]
+\stoptypescript
+
+% Sans
+
+\definefontfeature [jost-normal]    [default]           [smcp=no,c2sc=no]
+\definefontfeature [jost-smallcaps] [domitian-normal]   [smcp=yes,c2sc=yes]
+
+\starttypescript [sans] [jost] [name]
+    \setups[font:fallback:sans]
+    \definefontsynonym [Sans]           [file:Jost-400-Book]        [features=jost-normal]
+    \definefontsynonym [SansBold]       [file:Jost-700-Bold]        [features=jost-normal]
+    \definefontsynonym [SansItalic]     [file:Jost-400-BookItalic]  [features=jost-normal]
+    \definefontsynonym [SansSlanted]    [file:Jost-400-BookItalic]  [features=jost-normal]
+    \definefontsynonym [SansBoldItalic] [file:Jost-700-BoldItalic]  [features=jost-normal]
+    \definefontsynonym [SansBoldSlanted][file:Jost-700-BoldItalic]  [features=jost-normal]
+    \definefontsynonym [SansCaps]       [Sans]        	            [features=jost-smallcaps]
+\stoptypescript
+
+\starttypescript[local]
+    \definetypeface [local] [rm] [serif] [domitian] [default]
+    \definetypeface [local] [ss] [sans]  [jost]     [default]
+    \definetypeface [local] [tt] [mono]  [modern]   [default]
+    \definetypeface [local] [mm] [math]  [pagella]  [default]
+\stoptypescript
+
+\setupbodyfontenvironment[10pt][em=italic] %default
+\setupbodyfont[pagella,10pt] %default
+
+% Semantic names for various elements
+
+\definefont[mytitlefont][Serif sa 2]
+
+\stopenvironment

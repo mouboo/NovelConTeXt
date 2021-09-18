@@ -1,0 +1,135 @@
+%%% Language
+	\mainlanguage[sv]
+
+%%% Fonts: typescripts
+
+
+    
+%\setupmargindata[location=outer,style={\switchtobodyfont[small]}]
+
+\setupalign[hz,hanging]
+
+% Define and use paper sizes
+	\definepapersize[5x8][width=5in,height=8in]
+	\definepapersize[demy8vo][width=5.5in,height=8.5in]
+	\definepapersize[6x9][width=6in,height=9in]
+	\definepapersize[royal8vo][width=6.14in,height=9.21in]
+	\definepapersize[myPaperSize][height=297mm,width=210mm]
+	\definepapersize[myPageSize][height=150mm,width=150mm]
+	\definepapersize[bringhurst][height=232mm,width=134mm]
+
+	\setuppapersize[A4][A4]
+
+% Set layout of page
+	\setuplayout
+		[location={middle, left, doublesided},grid=no,
+			marking=on,
+			%top to bottom
+			topspace=48pt,
+			header=0pt,
+			headerdistance=0pt,
+			height=526pt, %add footer + footerdistance
+			footer=10pt,
+			footerdistance=24pt,
+			%left to right
+			backspace=48pt,
+			leftmargin=0pt,
+			leftmargindistance=0pt,
+			width=14cm,
+			rightmargin=0pt,
+			rightmargindistance=0pt]
+
+
+%\setuppagenumbering [location=, alternative=doublesided]
+
+% Headers and footers
+
+%\setupheader[style=\it]
+
+%\startsetups testheader
+%\expanded{\doifsomethingelse{\fetchmark[section][first]}}
+%  {\getmarking[sectionnumber][top]~~\getmarking[section][top]}
+%  {\getmarking[chapternumber]~~\getmarking[chapter]}
+%\stopsetups
+
+%\setupheadertexts
+%	[] %recto inner
+%	[\setups{testheader}]%recto outer
+%	[\setups{testheader}]%verso outer
+%	[] %verso inner
+
+\setupfootertexts
+	[] %recto inner
+	[\userpagenumber] %recto outer
+	[\userpagenumber] %verso outer
+	[] %verso inner
+
+% Indenting
+%	\setupindenting[yes,medium,next]
+	\setupwhitespace[medium]
+
+% Setup headings	
+
+	\setuphead[part]				
+		[
+			placehead=yes,
+			alternative=middle,
+			before=\startstandardmakeup,
+			after=\stopstandardmakeup,
+			header=empty]
+		
+	\setuphead[chapter]
+		[page=right,
+			number=yes,
+			style=\tfa,
+			deeptextcommand=\WORD,
+			textstyle={\kerncharacters[.1]},
+%			sectionsegments=chapter,
+%			align=nothyphenated,
+			header=empty,
+%			numbercommand={},
+%			align=middle,
+			before={\blank[force,big]},
+			after={\blank\hrule\blank[14pt]},]	
+			
+	\setuphead[section]
+		[page=no,
+			number=yes,
+			header=,
+%			sectionsegments=section,
+			%numbercommand={\DAN},
+			alternative=,
+			before=\blank,
+			after=\blank,
+			style={\sc},
+			textstyle={\kerncharacters[.1]},
+			inbetween=,]
+	
+	\setuphead[subsection]
+		[%commandbefore={\startnarrower},
+		%	commandafter={\stopnarrower},
+			page=no,number=yes,
+			header=,
+			sectionsegments=section,
+			numbercommand={},
+			alternative=,
+			before={\blank},
+			after=,
+			style={\tfb},
+			inbetween={},
+			align=right]
+
+\setupinitial[n=2]
+
+% Diagnostics
+%	\showframe
+%   \showgrid
+
+% Modify pages to fit content
+%	\adaptlayout
+%		[<pages>]
+%		[height=+1cm,
+%			lines=+1]
+
+	
+
