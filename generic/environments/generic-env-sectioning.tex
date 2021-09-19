@@ -1,0 +1,74 @@
+\startenvironment generic-env-sectioning
+
+% Setup section blocks
+
+
+% Frontmatter
+\setupsectionblock[frontpart][page=right]
+\startsectionblockenvironment [frontpart]
+  \setcounter [userpage] [1]
+  \setupuserpagenumber [numberconversion=romannumerals]
+\stopsectionblockenvironment
+
+%Bodymatter
+\setupsectionblock[bodypart][page=right]
+\startsectionblockenvironment [bodypart]
+  \setcounter [userpage] [1]
+\stopsectionblockenvironment
+
+%TODO: the next two as above 
+\setupsectionblock[appendix][page=right]
+\setupsectionblock[backpart][page=right]
+
+% Setup headings	
+
+	\setuphead[part]				
+		[
+			placehead=yes,
+			alternative=middle,
+			before=\startstandardmakeup,
+			after=\stopstandardmakeup,
+			header=empty]
+		
+	\setuphead[chapter]
+		[page=right,
+			number=yes,
+			style=\tfa,
+			deeptextcommand=\WORD,
+			textstyle={\kerncharacters[.1]},
+%			sectionsegments=chapter,
+%			align=nothyphenated,
+			header=empty,
+%			numbercommand={},
+%			align=middle,
+			before={\blank[force,big]},
+			after={\blank\hrule\blank[14pt]},]	
+			
+	\setuphead[section]
+		[page=no,
+			number=yes,
+			header=,
+%			sectionsegments=section,
+			%numbercommand={\DAN},
+			alternative=,
+			before=\blank,
+			after=\blank,
+			style={\sc},
+			textstyle={\kerncharacters[.1]},
+			inbetween=,]
+	
+	\setuphead[subsection]
+		[%commandbefore={\startnarrower},
+		%	commandafter={\stopnarrower},
+			page=no,number=yes,
+			header=,
+			sectionsegments=section,
+			numbercommand={},
+			alternative=,
+			before={\blank},
+			after=,
+			style={\tfb},
+			inbetween={},
+			align=right]
+
+\stopenvironment

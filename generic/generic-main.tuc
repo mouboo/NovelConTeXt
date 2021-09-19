@@ -4,8 +4,8 @@ utilitydata.comment={
  ["escape"]="[===[ ... ]===]",
  ["file"]="generic-main",
  ["format"]="cont-en",
- ["stamp"]="2021.08.10 12:42",
- ["version"]=0x1.51eb851eb851fp+0,
+ ["stamp"]="2021.08.30 19:56",
+ ["version"]=0x1.547ae147ae148p+0,
 }
 
 if not utilitydata.job then utilitydata.job = { } end
@@ -19,7 +19,7 @@ if not utilitydata.job.variables then utilitydata.job.variables = { } end
 
 utilitydata.job.variables.collected={
  ["macros"]={},
- ["randomseed"]=0x1.4c94c4ecd2491p-1,
+ ["randomseed"]=0x1.b2c1bda9d533p-2,
  ["sectionblockorder"]={ "frontpart", "bodypart", "appendix", "backpart" },
 }
 
@@ -29,8 +29,23 @@ if not utilitydata.job.structure then utilitydata.job.structure = { } end
 utilitydata.job.structure.collected={
  ["branches"]={
   {
-   ["branches"]={},
    ["name"]="generic-env-fonts",
+   ["type"]="environment",
+  },
+  {
+   ["name"]="generic-env-pagelayout",
+   ["type"]="environment",
+  },
+  {
+   ["name"]="generic-env-sectioning",
+   ["type"]="environment",
+  },
+  {
+   ["name"]="generic-env-paragraphs",
+   ["type"]="environment",
+  },
+  {
+   ["name"]="generic-env-tweaks",
    ["type"]="environment",
   },
  },
@@ -42,6 +57,13 @@ if not utilitydata.job then utilitydata.job = { } end
 if not utilitydata.job.positions then utilitydata.job.positions = { } end
 
 utilitydata.job.positions.collected={
+ ["shared"]={
+  ["x_h_d"]={},
+  ["x_h_d_hs"]={},
+  ["x_y_w_h"]={},
+  ["y_w_h_d"]={},
+ },
+ ["user"]={},
 }
 
 if not utilitydata.job then utilitydata.job = { } end
@@ -96,7 +118,7 @@ if not utilitydata.structures.counters then utilitydata.structures.counters = { 
 
 utilitydata.structures.counters.collected={
  ["chemical"]={
-  { 0, 0, 0 },
+  { 0, 0, 0, 0 },
  },
  ["combination"]={
   { 0 },
@@ -105,40 +127,40 @@ utilitydata.structures.counters.collected={
   { 0 },
  },
  ["figure"]={
-  { 0, 0, 0 },
+  { 0, 0, 0, 0 },
  },
  ["footnote"]={
   { 0 },
  },
  ["formula"]={
-  { 0, 0, 0 },
+  { 0, 0, 0, 0 },
  },
  ["graphic"]={
-  { 0, 0, 0 },
+  { 0, 0, 0, 0 },
  },
  ["intermezzo"]={
-  { 0, 0, 0 },
+  { 0, 0, 0, 0 },
  },
  ["itemgroup:itemize"]={
-  { 0, 0, 0 },
+  { 0, 0, 0, 0 },
  },
  ["itemgroup:itemize:note"]={
-  { 0, 0, 0 },
+  { 0, 0, 0, 0 },
  },
  ["linenote"]={
   { 0 },
  },
  ["paragraph"]={
-  { 0, 0, 0 },
+  { 0, 0, 0, 0 },
  },
  ["realpage"]={
-  { 2 },
+  { 10 },
  },
  ["subpage"]={
-  { 2 },
+  { 10 },
  },
  ["table"]={
-  { 0, 0, 0 },
+  { 0, 0, 0, 0 },
  },
  ["textnote:note"]={
   { 0 },
@@ -154,11 +176,25 @@ if not utilitydata.structures.lists then utilitydata.structures.lists = { } end
 utilitydata.structures.lists.collected={
  {
   ["metadata"]=2,
-  ["numberdata"]=3,
+  ["numberdata"]=4,
   ["references"]={
    ["block"]="frontpart",
    ["internal"]=1,
-   ["realpage"]=1,
+   ["realpage"]=5,
+   ["reference"]="content",
+   ["section"]=0,
+  },
+  ["titledata"]={
+   ["title"]="\\headtext {content}",
+  },
+ },
+ {
+  ["metadata"]=5,
+  ["numberdata"]=6,
+  ["references"]={
+   ["block"]="frontpart",
+   ["internal"]=2,
+   ["realpage"]=7,
    ["section"]=1,
   },
   ["titledata"]={
@@ -166,12 +202,12 @@ utilitydata.structures.lists.collected={
   },
  },
  {
-  ["metadata"]=2,
-  ["numberdata"]=4,
+  ["metadata"]=5,
+  ["numberdata"]=7,
   ["references"]={
    ["block"]="bodypart",
-   ["internal"]=2,
-   ["realpage"]=2,
+   ["internal"]=3,
+   ["realpage"]=9,
    ["section"]=2,
   },
   ["titledata"]={
@@ -188,15 +224,71 @@ utilitydata.structures.pages.collected={
  {
   ["block"]="frontpart",
   ["number"]=1,
-  ["numberdata"]=5,
-  ["prefixdata"]=6,
+  ["numberdata"]=8,
+  ["prefixdata"]=9,
+  ["state"]="stop",
+ },
+ {
+  ["block"]="frontpart",
+  ["number"]=1,
+  ["numberdata"]=8,
+  ["prefixdata"]=9,
+  ["state"]="start",
+ },
+ {
+  ["block"]="frontpart",
+  ["number"]=1,
+  ["numberdata"]=8,
+  ["prefixdata"]=9,
+  ["state"]="stop",
+ },
+ {
+  ["block"]="frontpart",
+  ["number"]=0,
+  ["numberdata"]=8,
+  ["prefixdata"]=9,
+  ["state"]="start",
+ },
+ {
+  ["block"]="frontpart",
+  ["number"]=0,
+  ["numberdata"]=8,
+  ["prefixdata"]=9,
+  ["state"]="start",
+ },
+ {
+  ["block"]="frontpart",
+  ["number"]=2,
+  ["numberdata"]=8,
+  ["prefixdata"]=9,
+  ["state"]="start",
+ },
+ {
+  ["block"]="frontpart",
+  ["number"]=3,
+  ["numberdata"]=8,
+  ["prefixdata"]=9,
+  ["state"]="start",
+ },
+ {
+  ["block"]="frontpart",
+  ["number"]=4,
+  ["numberdata"]=8,
+  ["prefixdata"]=9,
+  ["state"]="start",
+ },
+ {
+  ["block"]="bodypart",
+  ["number"]=1,
+  ["numberdata"]=10,
+  ["prefixdata"]=9,
   ["state"]="start",
  },
  {
   ["block"]="bodypart",
   ["number"]=2,
-  ["numberdata"]=5,
-  ["prefixdata"]=6,
+  ["numberdata"]=10,
+  ["prefixdata"]=9,
   ["state"]="start",
  },
 }
@@ -272,6 +364,24 @@ utilitydata.job.packed={
   {
    ["catcodes"]=9,
    ["coding"]="tex",
+   ["kind"]="section",
+   ["level"]=2,
+   ["name"]="title",
+   ["nolist"]=true,
+  },
+  { 0, 0 },
+  {
+   ["block"]="frontpart",
+   ["conversionset"]="default",
+   ["hidenumber"]=true,
+   ["language"]="sv",
+   ["numbers"]=3,
+   ["separatorset"]="default",
+   ["set"]="all",
+  },
+  {
+   ["catcodes"]=9,
+   ["coding"]="tex",
    ["increment"]="yes",
    ["kind"]="section",
    ["level"]=2,
@@ -295,12 +405,16 @@ utilitydata.job.packed={
    ["set"]="all",
   },
   {
+   ["conversion"]="romannumerals",
    ["conversionset"]="pagenumber",
   },
   {
    ["connector"]="–",
    ["prefix"]="no",
    ["set"]="part",
+  },
+  {
+   ["conversionset"]="pagenumber",
   },
  },
  ["keys"]={

@@ -1,17 +1,25 @@
-\environment generic-env-fonts
-\environment generic-env-pagelayout
-\environment generic-env-paragraphs
+\mainlanguage[sv]
+\environment environments/generic-env-fonts
+\environment environments/generic-env-pagelayout
+\environment environments/generic-env-sectioning
+\environment environments/generic-env-paragraphs
+\environment environments/generic-env-tweaks
+%\environment environments/generic-env-PDFA
 
-\environment generic-environment
+%\environment generic-environment
 
 \starttext
     \startfrontmatter
-        \input generic-ch001
+        \input content/generic-halftitlepage
+        \input content/generic-titlepage
+        \input content/generic-tableofcontent
+        \input content/generic-ch001
+        \input content/generic-ch002
     \stopfrontmatter
 
     \startbodymatter
-        \input generic-ch001
-        \input generic-ch002
+        \input content/generic-ch001
+        \input content/generic-ch002
     \stopbodymatter
 
     \startappendices

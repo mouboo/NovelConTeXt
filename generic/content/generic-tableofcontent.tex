@@ -1,0 +1,16 @@
+\setupheadtext[content=Min innehållsförteckning]
+\setupcombinedlist[content][list={chapter,section,subsection,subsubsection}, alternative=c,]
+\setuplist[chapter][width=10mm, style=bold]
+\setuplist[section][width=10mm, style=bold]
+\setuplist[subsection][width=20mm]
+
+% pagestyle=normal for changing the appearance of pagenumber
+\setuplist[subsubsection][width=20mm, style=slanted, pagestyle=normal]
+
+
+\start
+\setupinterlinespace[small]
+\completecontent % with title
+%\placecontent % without title
+\stop
+
