@@ -1,0 +1,35 @@
+\environment jaa-env.tex
+
+\starttext
+    \startfrontmatter
+        %\input content/generic-halftitlepage
+        %\input content/jaa-titlepage
+        %\input content/generic-tableofcontent
+        %\input content/generic-ch001
+        %\input content/generic-ch002
+    \stopfrontmatter
+
+    \startbodymatter
+    
+%\the\dimexpr(\paperwidth/9)\relax
+
+%\the\dimexpr(6in)\relax
+    
+    \startalignment[middle]% or center
+    {\definedfont[file:QTCaslanOpen.otf*default sa 3] Pride & Prejudice}
+    \stopalignment
+    \blank
+    
+        \dorecurse{4}{\input knuth}
+        %\input content/jaa-senseandsensibility.tex
+        %\input content/jaa-prideandprejudice.tex
+        %\input content/jaa-emma.tex
+        %\input content/jaa-northangerabbey.tex
+    \stopbodymatter
+
+    \startappendices
+    \stopappendices
+
+    \startbackmatter
+    \stopbackmatter
+\stoptext
