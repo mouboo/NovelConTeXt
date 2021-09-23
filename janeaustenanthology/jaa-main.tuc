@@ -4,8 +4,8 @@ utilitydata.comment={
  ["escape"]="[===[ ... ]===]",
  ["file"]="jaa-main",
  ["format"]="cont-en",
- ["stamp"]="2021.08.30 19:56",
- ["version"]=0x1.547ae147ae148p+0,
+ ["stamp"]="2021.08.10 12:42",
+ ["version"]=0x1.51eb851eb851fp+0,
 }
 
 if not utilitydata.job then utilitydata.job = { } end
@@ -19,7 +19,7 @@ if not utilitydata.job.variables then utilitydata.job.variables = { } end
 
 utilitydata.job.variables.collected={
  ["macros"]={},
- ["randomseed"]=0x1.43848e5711b24p-3,
+ ["randomseed"]=0x1.82301445109dp-3,
  ["sectionblockorder"]={ "frontpart", "bodypart", "appendix", "backpart" },
 }
 
@@ -36,13 +36,6 @@ if not utilitydata.job then utilitydata.job = { } end
 if not utilitydata.job.positions then utilitydata.job.positions = { } end
 
 utilitydata.job.positions.collected={
- ["shared"]={
-  ["x_h_d"]={},
-  ["x_h_d_hs"]={},
-  ["x_y_w_h"]={},
-  ["y_w_h_d"]={},
- },
- ["user"]={},
 }
 
 if not utilitydata.job then utilitydata.job = { } end
@@ -73,6 +66,92 @@ if not utilitydata.structures then utilitydata.structures = { } end
 if not utilitydata.structures.sections then utilitydata.structures.sections = { } end
 
 utilitydata.structures.sections.collected={
+ {
+  ["block"]="bodypart",
+  ["conversionset"]="default",
+  ["hidenumber"]=true,
+  ["language"]="en",
+  ["numbers"]=1,
+  ["separatorset"]="default",
+  ["set"]="all",
+ },
+ {
+  ["block"]="bodypart",
+  ["conversion"]="R",
+  ["conversionset"]="default",
+  ["language"]="en",
+  ["numbers"]=2,
+  ["segments"]="chapter",
+  ["separatorset"]="default",
+  ["set"]="all",
+ },
+ {
+  ["block"]="bodypart",
+  ["conversion"]="R",
+  ["conversionset"]="default",
+  ["language"]="en",
+  ["numbers"]=3,
+  ["segments"]="chapter",
+  ["separatorset"]="default",
+  ["set"]="all",
+ },
+ {
+  ["block"]="bodypart",
+  ["conversionset"]="default",
+  ["hidenumber"]=true,
+  ["language"]="en",
+  ["numbers"]=1,
+  ["separatorset"]="default",
+  ["set"]="all",
+ },
+ {
+  ["block"]="bodypart",
+  ["conversion"]="R",
+  ["conversionset"]="default",
+  ["language"]="en",
+  ["numbers"]=2,
+  ["segments"]="chapter",
+  ["separatorset"]="default",
+  ["set"]="all",
+ },
+ {
+  ["block"]="bodypart",
+  ["conversionset"]="default",
+  ["hidenumber"]=true,
+  ["language"]="en",
+  ["numbers"]=1,
+  ["separatorset"]="default",
+  ["set"]="all",
+ },
+ {
+  ["block"]="bodypart",
+  ["conversion"]="R",
+  ["conversionset"]="default",
+  ["language"]="en",
+  ["numbers"]=2,
+  ["segments"]="chapter",
+  ["separatorset"]="default",
+  ["set"]="all",
+ },
+ {
+  ["block"]="bodypart",
+  ["conversionset"]="default",
+  ["hidenumber"]=true,
+  ["language"]="en",
+  ["numbers"]=1,
+  ["separatorset"]="default",
+  ["set"]="all",
+ },
+ {
+  ["block"]="bodypart",
+  ["conversion"]="R",
+  ["conversionset"]="default",
+  ["language"]="en",
+  ["numbers"]=2,
+  ["segments"]="chapter",
+  ["separatorset"]="default",
+  ["set"]="all",
+ },
 }
 
 if not utilitydata.structures then utilitydata.structures = { } end
@@ -80,7 +159,7 @@ if not utilitydata.structures.counters then utilitydata.structures.counters = { 
 
 utilitydata.structures.counters.collected={
  ["chemical"]={
-  { 0 },
+  { 0, 0, 0, 0, 0, 0 },
  },
  ["combination"]={
   { 0 },
@@ -89,46 +168,46 @@ utilitydata.structures.counters.collected={
   { 0 },
  },
  ["figure"]={
-  { 0 },
+  { 0, 0, 0, 0, 0, 0 },
  },
  ["footnote"]={
   { 0 },
  },
  ["formula"]={
-  { 0 },
+  { 0, 0, 0, 0, 0, 0 },
  },
  ["graphic"]={
-  { 0 },
+  { 0, 0, 0, 0, 0, 0 },
  },
  ["intermezzo"]={
-  { 0 },
+  { 0, 0, 0, 0, 0, 0 },
  },
  ["itemgroup:itemize"]={
-  { 0 },
+  { 0, 0, 0, 0, 0, 0 },
  },
  ["itemgroup:itemize:note"]={
-  { 0 },
+  { 0, 0, 0, 0, 0, 0 },
  },
  ["linenote"]={
   { 0 },
  },
  ["paragraph"]={
-  { 0 },
+  { 0, 0, 0, 0, 0, 0 },
  },
  ["realpage"]={
-  { 4 },
+  { 12 },
  },
  ["subpage"]={
-  { 4 },
+  { 12 },
  },
  ["table"]={
-  { 0 },
+  { 0, 0, 0, 0, 0, 0 },
  },
  ["textnote:note"]={
   { 0 },
  },
  ["userpage"]={
-  { 4 },
+  { 10 },
  },
 }
 
@@ -136,6 +215,123 @@ if not utilitydata.structures then utilitydata.structures = { } end
 if not utilitydata.structures.lists then utilitydata.structures.lists = { } end
 
 utilitydata.structures.lists.collected={
+ {
+  ["metadata"]=4,
+  ["numberdata"]=5,
+  ["references"]={
+   ["block"]="bodypart",
+   ["internal"]=1,
+   ["realpage"]=3,
+   ["section"]=1,
+  },
+  ["titledata"]={
+   ["title"]="Sense and sensibility",
+  },
+ },
+ {
+  ["metadata"]=6,
+  ["numberdata"]=7,
+  ["references"]={
+   ["block"]="bodypart",
+   ["internal"]=2,
+   ["realpage"]=3,
+   ["section"]=2,
+  },
+  ["titledata"]={
+   ["label"]="chapter",
+  },
+ },
+ {
+  ["metadata"]=6,
+  ["numberdata"]=8,
+  ["references"]={
+   ["block"]="bodypart",
+   ["internal"]=3,
+   ["realpage"]=5,
+   ["section"]=3,
+  },
+  ["titledata"]={
+   ["label"]="chapter",
+  },
+ },
+ {
+  ["metadata"]=4,
+  ["numberdata"]=5,
+  ["references"]={
+   ["block"]="bodypart",
+   ["internal"]=4,
+   ["realpage"]=7,
+   ["section"]=4,
+  },
+  ["titledata"]={
+   ["title"]="Pride and Prejudice",
+  },
+ },
+ {
+  ["metadata"]=6,
+  ["numberdata"]=7,
+  ["references"]={
+   ["block"]="bodypart",
+   ["internal"]=5,
+   ["realpage"]=7,
+   ["section"]=5,
+  },
+  ["titledata"]={
+   ["label"]="chapter",
+  },
+ },
+ {
+  ["metadata"]=4,
+  ["numberdata"]=5,
+  ["references"]={
+   ["block"]="bodypart",
+   ["internal"]=6,
+   ["realpage"]=9,
+   ["section"]=6,
+  },
+  ["titledata"]={
+   ["title"]="Emma",
+  },
+ },
+ {
+  ["metadata"]=6,
+  ["numberdata"]=7,
+  ["references"]={
+   ["block"]="bodypart",
+   ["internal"]=7,
+   ["realpage"]=9,
+   ["section"]=7,
+  },
+  ["titledata"]={
+   ["label"]="chapter",
+  },
+ },
+ {
+  ["metadata"]=4,
+  ["numberdata"]=5,
+  ["references"]={
+   ["block"]="bodypart",
+   ["internal"]=8,
+   ["realpage"]=11,
+   ["section"]=8,
+  },
+  ["titledata"]={
+   ["title"]="Northanger Abbey",
+  },
+ },
+ {
+  ["metadata"]=6,
+  ["numberdata"]=7,
+  ["references"]={
+   ["block"]="bodypart",
+   ["internal"]=9,
+   ["realpage"]=11,
+   ["section"]=9,
+  },
+  ["titledata"]={
+   ["label"]="chapter",
+  },
+ },
 }
 
 if not utilitydata.structures then utilitydata.structures = { } end
@@ -143,31 +339,87 @@ if not utilitydata.structures.pages then utilitydata.structures.pages = { } end
 
 utilitydata.structures.pages.collected={
  {
+  ["block"]="frontpart",
+  ["number"]=1,
+  ["numberdata"]=9,
+  ["prefixdata"]=10,
+  ["state"]="stop",
+ },
+ {
+  ["block"]="frontpart",
+  ["number"]=1,
+  ["numberdata"]=9,
+  ["prefixdata"]=10,
+  ["state"]="start",
+ },
+ {
   ["block"]="bodypart",
   ["number"]=1,
-  ["numberdata"]=1,
-  ["prefixdata"]=2,
+  ["numberdata"]=9,
+  ["prefixdata"]=10,
   ["state"]="start",
  },
  {
   ["block"]="bodypart",
   ["number"]=2,
-  ["numberdata"]=1,
-  ["prefixdata"]=2,
+  ["numberdata"]=9,
+  ["prefixdata"]=10,
   ["state"]="start",
  },
  {
   ["block"]="bodypart",
   ["number"]=3,
-  ["numberdata"]=1,
-  ["prefixdata"]=2,
+  ["numberdata"]=9,
+  ["prefixdata"]=10,
   ["state"]="start",
  },
  {
   ["block"]="bodypart",
   ["number"]=4,
-  ["numberdata"]=1,
-  ["prefixdata"]=2,
+  ["numberdata"]=9,
+  ["prefixdata"]=10,
+  ["state"]="start",
+ },
+ {
+  ["block"]="bodypart",
+  ["number"]=5,
+  ["numberdata"]=9,
+  ["prefixdata"]=10,
+  ["state"]="start",
+ },
+ {
+  ["block"]="bodypart",
+  ["number"]=6,
+  ["numberdata"]=9,
+  ["prefixdata"]=10,
+  ["state"]="start",
+ },
+ {
+  ["block"]="bodypart",
+  ["number"]=7,
+  ["numberdata"]=9,
+  ["prefixdata"]=10,
+  ["state"]="start",
+ },
+ {
+  ["block"]="bodypart",
+  ["number"]=8,
+  ["numberdata"]=9,
+  ["prefixdata"]=10,
+  ["state"]="start",
+ },
+ {
+  ["block"]="bodypart",
+  ["number"]=9,
+  ["numberdata"]=9,
+  ["prefixdata"]=10,
+  ["state"]="start",
+ },
+ {
+  ["block"]="bodypart",
+  ["number"]=10,
+  ["numberdata"]=9,
+  ["prefixdata"]=10,
   ["state"]="start",
  },
 }
@@ -239,6 +491,53 @@ utilitydata.job.embedded.collected={
 
 utilitydata.job.packed={
  ["index"]={
+  { 0 },
+  { 0, 1 },
+  { 0, 2 },
+  {
+   ["catcodes"]=9,
+   ["coding"]="tex",
+   ["kind"]="section",
+   ["level"]=1,
+   ["name"]="part",
+  },
+  {
+   ["block"]="bodypart",
+   ["conversionset"]="default",
+   ["hidenumber"]=true,
+   ["language"]="en",
+   ["numbers"]=1,
+   ["separatorset"]="default",
+   ["set"]="all",
+  },
+  {
+   ["catcodes"]=9,
+   ["coding"]="tex",
+   ["increment"]="yes",
+   ["kind"]="section",
+   ["level"]=2,
+   ["name"]="chapter",
+  },
+  {
+   ["block"]="bodypart",
+   ["conversion"]="R",
+   ["conversionset"]="default",
+   ["language"]="en",
+   ["numbers"]=2,
+   ["segments"]="chapter",
+   ["separatorset"]="default",
+   ["set"]="all",
+  },
+  {
+   ["block"]="bodypart",
+   ["conversion"]="R",
+   ["conversionset"]="default",
+   ["language"]="en",
+   ["numbers"]=3,
+   ["segments"]="chapter",
+   ["separatorset"]="default",
+   ["set"]="all",
+  },
   {
    ["conversionset"]="pagenumber",
   },

@@ -24,7 +24,37 @@
         
     \setuppagenumbering [location=bottom, alternative=doublesided]
     
-    \setupbodyfont[qtcaslan,12pt]
+    \setupbodyfont[schola,12pt]
     
     \setupheadertexts[\hfill Pride and Prejudice \hfill][]%recto
                      [][\hfill Jane Austen \hfill]%verso
+
+\setupcombinedlist[content][list={part}]
+
+\setuphead
+   [part]
+   [incrementnumber=list,
+    page=right,
+    number=no,
+    header=empty,
+    align=middle,
+    placehead=yes,
+    before=,
+    after=,]
+
+\setuplabeltext[chapter=CHAPTER~]
+\setuphead
+    [chapter]
+    [continue=no,
+     page=no,
+     conversion=R,
+     sectionsegments=chapter,
+     align=middle,
+     style=\tf,
+     before=,
+     after=,]
+
+\startsectionblockenvironment[bodypart]
+\setcounter[userpage][1]
+\stopsectionblockenvironment
+
