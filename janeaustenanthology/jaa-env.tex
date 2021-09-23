@@ -29,32 +29,39 @@
     \setupheadertexts[\hfill Pride and Prejudice \hfill][]%recto
                      [][\hfill Jane Austen \hfill]%verso
 
-\setupcombinedlist[content][list={part}]
+%%% Table of contents
+    
+    \setupcombinedlist[content][list={part}]
 
-\setuphead
-   [part]
-   [incrementnumber=list,
-    page=right,
-    number=no,
-    header=empty,
-    align=middle,
-    placehead=yes,
-    before=,
-    after=,]
+%%% Sectioning
 
-\setuplabeltext[chapter=CHAPTER~]
-\setuphead
-    [chapter]
-    [continue=no,
-     page=no,
-     conversion=R,
-     sectionsegments=chapter,
-     align=middle,
-     style=\tf,
-     before=,
-     after=,]
+    \startsectionblockenvironment[bodypart]
+        \setcounter[userpage][1]
+    \stopsectionblockenvironment
 
-\startsectionblockenvironment[bodypart]
-\setcounter[userpage][1]
-\stopsectionblockenvironment
+    \setuphead
+       [part]
+       [incrementnumber=list,
+        page=right,
+        number=no,
+        header=empty,
+        align=middle,
+        placehead=yes,
+        before=,
+        after={\blank[small]} \hrule height 1pt \vskip 1pt \hrule \relax,]
+
+    \setuplabeltext[chapter=CHAPTER~]
+    \setuphead
+        [chapter]
+        [continue=no,
+         page=no,
+         conversion=R,
+         sectionsegments=chapter,
+         align=middle,
+         style=\tf,
+         before={\blank[big]},
+         after=\midaligned{\blackrule[height=0.4pt, width=4em]}{\blank[medium]},]
+    
+%%% Visual debugging
+    %\showframe
 
