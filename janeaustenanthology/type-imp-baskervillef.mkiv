@@ -1,0 +1,28 @@
+\definefontfeature
+  [baskervillef-normal]
+  [default]
+  [default]
+
+\definefontfeature
+  [baskervillef-smallcaps]
+  [default]
+  [smcp=yes,c2sc=yes]
+
+\starttypescriptcollection[domitian]
+
+    \starttypescript [serif] [baskervillef] [name]
+        \setups[font:fallback:serif]
+        \definefontsynonym [Serif]           [file:BaskervilleF-Regular]    [features=baskervillef-normal]
+        \definefontsynonym [SerifBold]       [file:BaskervilleF-Bold]       [features=baskervillef-normal]
+        \definefontsynonym [SerifItalic]     [file:BaskervilleF-Italic]     [features=baskervillef-normal]
+        \definefontsynonym [SerifSlanted]    [file:BaskervilleF-Italic]     [features=baskervillef-normal]
+        \definefontsynonym [SerifBoldItalic] [file:BaskervilleF-BoldItalic] [features=baskervillef-normal]
+        \definefontsynonym [SerifBoldSlanted][file:BaskervilleF-BoldItalic] [features=baskervillef-normal]
+        \definefontsynonym [SerifCaps]       [Serif]     	                [features=baskervillef-smallcaps]
+    \stoptypescript
+
+    \starttypescript[baskervillef]
+        \definetypeface [baskervillef] [rm] [serif] [baskervillef] [default]
+    \stoptypescript
+
+\stoptypescriptcollection

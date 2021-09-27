@@ -2,7 +2,7 @@ local utilitydata = { }
 
 utilitydata.comment={
  ["escape"]="[===[ ... ]===]",
- ["file"]="jaa-main",
+ ["file"]="jaa-testing",
  ["format"]="cont-en",
  ["stamp"]="2021.08.10 12:42",
  ["version"]=0x1.51eb851eb851fp+0,
@@ -19,8 +19,8 @@ if not utilitydata.job.variables then utilitydata.job.variables = { } end
 
 utilitydata.job.variables.collected={
  ["macros"]={},
- ["randomseed"]=0x1.82301445109dp-3,
- ["sectionblockorder"]={ "frontpart", "bodypart", "appendix", "backpart" },
+ ["randomseed"]=0x1.37d71d87a5708p-2,
+ ["sectionblockorder"]={},
 }
 
 if not utilitydata.job then utilitydata.job = { } end

@@ -1,0 +1,52 @@
+\definepapersize[6x9][width=6in, height=9in]
+\definepapersize[HP][width=20.5cm, height=31cm]
+\setuppapersize[6x9][6x9]
+
+\setupbodyfont[schola,11pt]
+
+%Tscichold
+
+\setuplayout[location={middle,middle},
+  marking=on,
+  topspace=\dimexpr(\paperheight/9)/2-(0.5\lineheight),
+  header=\lineheight,
+  headerdistance=\dimexpr(\paperheight/9)/2-(0.5\lineheight),
+  height=\dimexpr(\paperheight/9)*7+(\paperheight/9)/2+\lineheight,
+  footer=\lineheight,
+  footerdistance=\dimexpr(\paperheight/9)-0.5\lineheight,
+  backspace=\dimexpr(\paperwidth/9),
+  leftmargin=0pt,
+  leftmargindistance=0pt,
+  width=\dimexpr(\paperwidth/9)*6,
+  rightmargin=0pt,
+  rightmargindistance=0pt,
+]
+
+\setuppagenumbering[location=bottom,alternative=doublesided]
+
+%\showframe
+\showgrid
+
+\setupheadertexts[]
+\setupheadertexts[\setups{rectoheader}][][][\setups{versoheader}]
+
+\startsetups[rectoheader]
+  %\rlap{\pagenumber}
+  \hfill
+  \sc{header}%\getmarking[chapter]
+  \hfill
+  %\llap{whatever}
+\stopsetups
+
+\startsetups[versoheader]
+  %\rlap{whatever}
+  \hfill
+  \sc{header}%\getmarking[section]
+  \hfill
+  %\llap{\pagenumber}
+\stopsetups
+
+\starttext
+\the\lineheight
+\dorecurse{10}{\input knuth}
+\stoptext
