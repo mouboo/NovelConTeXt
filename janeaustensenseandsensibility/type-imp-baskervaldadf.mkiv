@@ -1,0 +1,28 @@
+\definefontfeature
+  [baskervaldadf-normal]
+  [default]
+  [onum=yes]
+
+\definefontfeature
+  [baskervaldadf-smallcaps]
+  [default]
+  [smcp=yes,c2sc=yes]
+
+\starttypescriptcollection[baskervaldadf]
+
+    \starttypescript [serif] [baskervaldadf] [name]
+        \setups[font:fallback:serif]
+        \definefontsynonym [Serif]           [file:BaskervaldADFStd]            [features=baskervaldadf-normal]
+        \definefontsynonym [SerifBold]       [file:BaskervaldADFStd-Bold]       [features=baskervaldadf-normal]
+        \definefontsynonym [SerifItalic]     [file:BaskervaldADFStd-Italic]     [features=baskervaldadf-normal]
+        \definefontsynonym [SerifSlanted]    [file:BaskervaldADFStd-Italic]     [features=baskervaldadf-normal]
+        \definefontsynonym [SerifBoldItalic] [file:BaskervaldADFStd-BoldItalic] [features=baskervaldadf-normal]
+        \definefontsynonym [SerifBoldSlanted][file:BaskervaldADFStd-BoldItalic] [features=baskervaldadf-normal]
+        \definefontsynonym [SerifCaps]       [Serif]     	                    [features=baskervaldadf-smallcaps]
+    \stoptypescript
+
+    \starttypescript[baskervaldadf]
+        \definetypeface [baskervaldadf] [rm] [serif] [baskervaldadf] [default]
+    \stoptypescript
+
+\stoptypescriptcollection

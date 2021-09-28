@@ -1,0 +1,28 @@
+\definefontfeature
+  [baskervaldx-normal]
+  [default]
+  [onum=yes]
+
+\definefontfeature
+  [baskervaldx-smallcaps]
+  [default]
+  [smcp=yes,c2sc=yes]
+
+\starttypescriptcollection[baskervaldx]
+
+    \starttypescript [serif] [baskervaldx] [name]
+        \setups[font:fallback:serif]
+        \definefontsynonym [Serif]           [file:Baskervaldx-Reg]    [features=baskervaldx-normal]
+        \definefontsynonym [SerifBold]       [file:Baskervaldx-Bol]    [features=baskervaldx-normal]
+        \definefontsynonym [SerifItalic]     [file:Baskervaldx-Ita]    [features=baskervaldx-normal]
+        \definefontsynonym [SerifSlanted]    [file:Baskervaldx-Ita]    [features=baskervaldx-normal]
+        \definefontsynonym [SerifBoldItalic] [file:Baskervaldx-BolIta] [features=baskervaldx-normal]
+        \definefontsynonym [SerifBoldSlanted][file:Baskervaldx-BolIta] [features=baskervaldx-normal]
+        \definefontsynonym [SerifCaps]       [Serif]     	           [features=baskervaldx-smallcaps]
+    \stoptypescript
+
+    \starttypescript[baskervaldx]
+        \definetypeface [baskervaldx] [rm] [serif] [baskervaldx] [default]
+    \stoptypescript
+
+\stoptypescriptcollection
