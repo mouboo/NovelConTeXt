@@ -1,0 +1,34 @@
+\definefontfeature
+  [sortsmillgoudy-normal]
+  [default]
+  [onum=yes]
+
+\definefontfeature
+  [sortsmillgoudy-smallcaps]
+  [sortsmillgoudy-normal]
+  [smcp=yes,c2sc=yes]
+
+\definefontfeature
+  [swash]
+  [swsh=yes]
+
+\starttypescriptcollection[sortsmillgoudy]
+
+\starttypescript [serif] [sortsmillgoudy]
+       \setups[font:fallback:serif]
+       \definefontsynonym [Serif]           [file:OFLGoudyStM]          [features=sortsmillgoudy-normal]
+       \definefontsynonym [SerifItalic]     [file:OFLGoudyStM-Italic]   [features=sortsmillgoudy-normal]
+       \definefontsynonym [SerifBold]       [Serif]                     [features=sortsmillgoudy-normal]
+       \definefontsynonym [SerifSlanted]    [file:OFLGoudyStM-Italic]   [features=sortsmillgoudy-normal]
+       \definefontsynonym [SerifBoldItalic] [file:OFLGoudyStM-Italic]   [features=sortsmillgoudy-normal]
+       \definefontsynonym [SerifBoldSlanted][file:OFLGoudyStM-Italic]   [features=sortsmillgoudy-normal]
+       \definefontsynonym [SerifCaps]       [Serif]                     [features=sortsmillgoudy-smallcaps]
+\stoptypescript
+
+\starttypescript[sortsmillgoudy]
+     \definetypeface [sortsmillgoudy] [rm] [serif] [sortsmillgoudy] [default]
+%     \definetypeface [sortsmillgoudy] [tt] [mono]  [dejavu]     [default] [rscale=0.8] % 
+%     \definetypeface [sortsmillgoudy] [mm] [math]  [bonum]      [default] [rscale=0.8] % 
+\stoptypescript
+
+\stoptypescriptcollection

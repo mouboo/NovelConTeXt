@@ -1,0 +1,34 @@
+\definefontfeature
+  [goudybookletter-normal]
+  [default]
+  [onum=yes]
+
+\definefontfeature
+  [goudybookletter-smallcaps]
+  [goudybookletter-normal]
+  [smcp=yes,c2sc=yes]
+
+\definefontfeature
+  [swash]
+  [swsh=yes]
+
+\starttypescriptcollection[goudybookletter]
+
+\starttypescript [serif] [goudybookletter]
+       \setups[font:fallback:serif]
+       \definefontsynonym [Serif]           [file:GoudyBookletter1911]   [features=goudybookletter-normal]
+       \definefontsynonym [SerifItalic]     [file:GoudyBookletter1911]   [features=goudybookletter-normal]
+       \definefontsynonym [SerifBold]       [Serif]                     [features=goudybookletter-normal]
+       \definefontsynonym [SerifSlanted]    [file:GoudyBookletter1911]   [features=goudybookletter-normal]
+       \definefontsynonym [SerifBoldItalic] [file:GoudyBookletter1911]   [features=goudybookletter-normal]
+       \definefontsynonym [SerifBoldSlanted][file:GoudyBookletter1911]   [features=goudybookletter-normal]
+       \definefontsynonym [SerifCaps]       [Serif]                     [features=goudybookletter-smallcaps]
+\stoptypescript
+
+\starttypescript[goudybookletter]
+     \definetypeface [goudybookletter] [rm] [serif] [goudybookletter] [default]
+%     \definetypeface [goudybookletter] [tt] [mono]  [dejavu]     [default] [rscale=0.8] % 
+%     \definetypeface [goudybookletter] [mm] [math]  [bonum]      [default] [rscale=0.8] % 
+\stoptypescript
+
+\stoptypescriptcollection

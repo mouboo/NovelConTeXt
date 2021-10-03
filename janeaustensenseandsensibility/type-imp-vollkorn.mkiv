@@ -1,0 +1,34 @@
+\definefontfeature
+  [vollkorn-normal]
+  [default]
+  [onum=yes]
+
+\definefontfeature
+  [vollkorn-smallcaps]
+  [vollkorn-normal]
+  [smcp=yes,c2sc=yes]
+
+\definefontfeature
+  [swash]
+  [swsh=yes]
+
+\starttypescriptcollection[vollkorn]
+
+\starttypescript [serif] [vollkorn]
+       \setups[font:fallback:serif]
+       \definefontsynonym [Serif]           [file:Vollkorn-Regular]         [features=vollkorn-normal]
+       \definefontsynonym [SerifItalic]     [file:Vollkorn-Italic]          [features=vollkorn-normal]
+       \definefontsynonym [SerifBold]       [file:Vollkorn-Bold]            [features=vollkorn-normal]
+       \definefontsynonym [SerifSlanted]    [file:Vollkorn-Italic]          [features=vollkorn-normal]
+       \definefontsynonym [SerifBoldItalic] [file:Vollkorn-BoldItalic]      [features=vollkorn-normal]
+       \definefontsynonym [SerifBoldSlanted][file:Vollkorn-BoldItalic]      [features=vollkorn-normal]
+       \definefontsynonym [SerifCaps]       [Serif]                         [features=vollkorn-smallcaps]
+\stoptypescript
+
+\starttypescript[vollkorn]
+     \definetypeface [vollkorn] [rm] [serif] [vollkorn] [default]
+%     \definetypeface [vollkorn] [tt] [mono]  [dejavu]     [default] [rscale=0.8] % 
+%     \definetypeface [vollkorn] [mm] [math]  [bonum]      [default] [rscale=0.8] % 
+\stoptypescript
+
+\stoptypescriptcollection

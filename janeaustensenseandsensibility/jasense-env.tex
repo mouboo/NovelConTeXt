@@ -1,6 +1,7 @@
 %%% jaa-env.tex
 
-    \setupbodyfont[myebgaramond,11pt]
+    \setupbodyfont[sortsmillgoudy,11pt]
+%    \setupbodyfont[goudybookletter,11pt]
     \definebodyfontenvironment[10pt][interlinespace=12pt]
     \definebodyfontenvironment[11pt][interlinespace=16pt]
     \definebodyfontenvironment[12pt][interlinespace=16pt]
@@ -35,6 +36,7 @@
                      [][\hfill {\it Jane Austen} \hfill]%verso
 
 \setupindenting[yes,next,medium]
+\setupspacing[packed]
 
 %%% Table of contents
     
@@ -57,18 +59,20 @@
         before=,
         after={\blank[small]} \hrule height 1pt \vskip 1pt \hrule \relax,]
 
-    \setuplabeltext[chapter=CHAPTER~]
+    \setuplabeltext[chapter=Chapter~]
     \setuphead
         [chapter]
-        [continue=no,
-         page=no,
+        [page=yes,
+         header=empty,
          conversion=R,
          sectionsegments=chapter,
          align=middle,
-         style=\tf,
-         before={\blank[big]},
-         after=\midaligned{\blackrule[height=0.4pt, width=4em]}{\blank[medium]},]
+         style=\tfc,
+         before=\startlinecorrection{\blank[force,2*big]},
+         after={\stoplinecorrection},]
     
 %%% Visual debugging
 %    \showframe
- %   \showgrid
+%   \showgrid
+
+\definefontfeature[f:smallcaps]                 [swsh=yes]
