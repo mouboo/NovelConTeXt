@@ -1,13 +1,13 @@
 %%% jaa-env.tex
 
-    \setupbodyfont[sortsmillgoudy,11pt]
+    \setupbodyfont[myebgaramond,11pt]
 %    \setupbodyfont[goudybookletter,11pt]
     \definebodyfontenvironment[10pt][interlinespace=12pt]
     \definebodyfontenvironment[11pt][interlinespace=16pt]
     \definebodyfontenvironment[12pt][interlinespace=16pt]
 
     \definepapersize[6x9][width=6in,height=9in]
-    \setuppapersize[6x9][A4]
+    \setuppapersize[6x9][6x9]
     
     \setuplayout % Rosarivo's 9ths
 	   [location={middle, left, doublesided},
@@ -72,7 +72,8 @@
          after={\stoplinecorrection},]
     
 %%% Visual debugging
-%    \showframe
-%   \showgrid
+    %\showframe
+    %\showgrid
 
-\definefontfeature[f:smallcaps]                 [swsh=yes]
+\definefontfeature[swash]                       [swsh=yes]
+\definefontfeature[ligature]                    [liga=yes]

@@ -1,0 +1,41 @@
+\definemakeup[titlepage]
+    [top=,
+     doublesided=no,
+     headerstate=empty,
+     footerstate=high,
+     align=middle,]
+
+\definefont [snsfont] [Italic*default at 40pt]
+
+\startmakeup[titlepage]
+
+    \blank[40pt,force]
+
+    {\snsfont \subtractfeature[ligature]%
+        \kerncharacters[0.10]{{\addfeature[swash]S}ense%
+        \blank[10pt]%
+        &%
+        \blank[10pt]%
+        {\addfeature[swash]S}ensibility}%
+    }
+
+    \blank[30pt]
+
+    {\itc by} 
+
+    \blank[30pt]
+
+    {\itd{\addfeature[swash]J}ane {\addfeature[swash]A}usten}
+    
+    \vfill
+
+    {\addfeature[swash]Q}uat Books, Eslöv
+
+    \blank[5pt]
+
+    2021
+
+    \blank[20pt,force]
+
+\stopmakeup
+

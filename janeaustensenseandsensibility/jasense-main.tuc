@@ -139,10 +139,10 @@ utilitydata.structures.counters.collected={
   { 0, 0, 0, 0 },
  },
  ["realpage"]={
-  { 20 },
+  { 22 },
  },
  ["subpage"]={
-  { 20 },
+  { 22 },
  },
  ["table"]={
   { 0, 0, 0, 0 },
@@ -165,7 +165,7 @@ utilitydata.structures.lists.collected={
   ["references"]={
    ["block"]="bodypart",
    ["internal"]=1,
-   ["realpage"]=1,
+   ["realpage"]=3,
    ["section"]=1,
   },
   ["titledata"]={
@@ -178,7 +178,7 @@ utilitydata.structures.lists.collected={
   ["references"]={
    ["block"]="bodypart",
    ["internal"]=2,
-   ["realpage"]=7,
+   ["realpage"]=9,
    ["section"]=2,
   },
   ["titledata"]={
@@ -191,7 +191,7 @@ utilitydata.structures.lists.collected={
   ["references"]={
    ["block"]="bodypart",
    ["internal"]=3,
-   ["realpage"]=14,
+   ["realpage"]=16,
    ["section"]=3,
   },
   ["titledata"]={
@@ -204,6 +204,20 @@ if not utilitydata.structures then utilitydata.structures = { } end
 if not utilitydata.structures.pages then utilitydata.structures.pages = { } end
 
 utilitydata.structures.pages.collected={
+ {
+  ["block"]="frontpart",
+  ["number"]=1,
+  ["numberdata"]=8,
+  ["prefixdata"]=9,
+  ["state"]="stop",
+ },
+ {
+  ["block"]="frontpart",
+  ["number"]=1,
+  ["numberdata"]=8,
+  ["prefixdata"]=9,
+  ["state"]="start",
+ },
  {
   ["block"]="bodypart",
   ["number"]=1,
