@@ -1,6 +1,6 @@
 \definemakeup[titlepage]
     [top=,
-     doublesided=yes,
+     doublesided=no,
      headerstate=empty,
      footerstate=high,
      align=middle,]
@@ -44,3 +44,6 @@
 
 \stopmakeup
 
+%Backside of titlepage
+\startstandardmakeup[page=no,doublesided=no]
+\stopstandardmakeup

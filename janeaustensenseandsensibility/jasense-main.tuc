@@ -1297,7 +1297,7 @@ utilitydata.structures.pages.collected={
   ["number"]=1,
   ["numberdata"]=102,
   ["prefixdata"]=103,
-  ["state"]="start",
+  ["state"]="stop",
  },
  {
   ["block"]="bodypart",
