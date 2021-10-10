@@ -1,0 +1,46 @@
+\definemakeup[titlepage]
+    [top=,
+     doublesided=yes,
+     headerstate=empty,
+     footerstate=high,
+     align=middle,]
+
+\definefont [snsfont] [Italic*default at 34pt]
+
+\startmakeup[titlepage]
+
+    \blank[40pt,force]
+
+    {\snsfont \subtractfeature[ligature]%
+        \kerncharacters[0.05]{{\addfeature[swash]S}ense%
+        \blank[9pt]%
+        &%
+        \blank[10pt]%
+        {\addfeature[swash]S}ensibility}%
+    }
+
+    \blank[25pt]
+
+    {\itb by} 
+
+    \blank[10pt]
+
+%    {\itc{\addfeature[swash]J}ane {\addfeature[swash]A}usten}
+     {\scc \kerncharacters[0.05] Jane Austen}      
+    \vfill
+
+
+    \dontleavehmode \externalfigure[acorn.pdf][width=32pt]
+
+    \blank[3pt]
+
+    {\addfeature[swash]Q}uat Books, Eslöv
+
+    \blank[3pt]
+
+    2021
+
+    \blank[20pt,force]
+
+\stopmakeup
+
