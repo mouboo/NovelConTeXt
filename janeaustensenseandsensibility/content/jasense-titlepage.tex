@@ -2,10 +2,25 @@
     [top=,
      doublesided=no,
      headerstate=empty,
-     footerstate=high,
+     footerstate=empty,
      align=middle,]
 
 \definefont [snsfont] [Italic*default at 34pt]
+
+\startuseMPgraphic{page}
+StartPage ;
+pickup pensquare scaled 1pt ;
+%fill Page withcolor .625white ;
+%fill Field[OuterMargin][Text] withcolor .850white ;
+%fill Field[Text] [Text] withcolor .850white ;
+%draw Field[OuterMargin][Text] withcolor .625red ;
+draw Field[Text] [Text] withcolor black ;
+StopPage ;
+\stopuseMPgraphic
+
+\defineoverlay[page][\useMPgraphic{page}]
+%\setupbackgrounds[page][background=page]
+
 
 \startmakeup[titlepage]
 
@@ -30,9 +45,9 @@
     \vfill
 
 
-    \dontleavehmode \externalfigure[acorn.pdf][width=32pt]
+    \dontleavehmode \externalfigure[Simple-leaves.pdf][width=50pt]
 
-    \blank[3pt]
+    \blank[0pt]
 
     {\addfeature[swash]Q}uat Books, Eslöv
 
@@ -44,6 +59,10 @@
 
 \stopmakeup
 
+\setupbackgrounds[page][background=,]
+
 %Backside of titlepage
 \startstandardmakeup[page=no,doublesided=no]
 \stopstandardmakeup
+
+
